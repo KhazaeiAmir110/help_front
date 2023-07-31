@@ -1,37 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <title>Html Table</title>
     <link rel="icon" type="image/png" href="images.jpg">
+
+    <style>
+        body{
+            font-family: "Urdu Typesetting";
+        }
+        table{
+            width: 100%;
+            text-align: right;
+            border-collapse: collapse;
+        }
+        th,td{
+            border: 2px solid blue;
+            padding: 10px;
+        }
+        thead{
+            text-align: center;
+            font-size: x-large;
+        }
+        tbody{
+            color: purple;
+        }
+    </style>
 </head>
 <body>
+    <h1>مشخصات کارمندان</h1>
     <table>
-        <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
-        </tr>
-        <tr>
-            <td>Alic</td>
-            <td>Maria</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>Emata</td>
-            <td>Eslip</td>
-            <td>UK</td>
-        </tr>
-        <tr>
-            <td>UTI</td>
-            <td>Umit</td>
-            <td>Canada</td>
-        </tr>
-        <tr>
-            <td>Islamic</td>
-            <td>Isi</td>
-            <td>Islam</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>نام</th>
+                <th>شماره تلفن</th>
+                <th>ایمیل</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>عالیس</td>
+                <td>100000000</td>
+                <td>alic@gmail.com</td>
+            </tr>
+            <tr>
+                <td>حکیم</td>
+                <td>094443333</td>
+                <td>hamid@gmail.com</td>
+            </tr>
+            <tr>
+                <td>علی</td>
+                <td>093232434</td>
+                <td>ali@gmail.com</td>
+            </tr>
+            <tr>
+                <td>حسین</td>
+                <td>092356134</td>
+                <td>hossein@gmail.com</td>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>
