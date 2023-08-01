@@ -2,22 +2,30 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Html Block and Inline Elements</title>
+    <title>div and span</title>
     <link rel="icon" type="image/png" href="Untitled2.png">
     <style>
-        p{
+        body{
             color: blueviolet;
-            background-color: fuchsia;
             font-size: 40px;
             font-family: "Urdu Typesetting";
-            border:5px solid blue;
-            width: 100px;
+        }
+        div{
+            border: 2px solid dimgrey;
+            background-color: greenyellow;
         }
     </style>
 </head>
 <body>
-    <p>متن تستی</p>
-    <p>متن تستی</p>
-    <p>متن تستی</p>
+<div style="display: flex; gap: 16px;padding: 2px">
+    <div style="width: 350px;background-color: cyan">
+        <h1>عنوان اول</h1>
+        <p>این متن مخصوص <span style="color: black">عنوان اول</span> است</p>
+    </div>
+    <div style="width: 400px;background-color: coral">
+        <h1>عنوان دوم</h1>
+        <p>این متن مخصوص عنوان دوم است</p>
+    </div>
+</div>
 </body>
 </html>
