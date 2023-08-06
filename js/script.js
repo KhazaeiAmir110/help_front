@@ -1,9 +1,2 @@
-var myage = 25
-
-alert(typeof myage)
-
-var myname = 'amir'
-alert(typeof myname)
-
-var isOnline = true
-alert(isOnline)
+var username = prompt("name :")
+var password = prompt("password :", [username + '_13233'])
