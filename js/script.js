@@ -1,4 +1,9 @@
-var usersCount = 'hello'
+var myage = 25
 
-const courses = 20;
-alert(courses)
+alert(typeof myage)
+
+var myname = 'amir'
+alert(typeof myname)
+
+var isOnline = true
+alert(isOnline)
