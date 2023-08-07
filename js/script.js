@@ -1,24 +1,13 @@
-let firstNumber = 12;
-let secondNumber = 20;
-let threeNumber = 2;
-let forNumber = 10;
+// let number_1 = Number(prompt("numbder one :"));
+// let number_2 = Number(prompt("number two : "));
+//
+// // alert(number_1 + number_2)
 
-// جمع
-let plus = firstNumber + secondNumber;
+// دریافت نام کاربری و رمزعبور به صورت همزمان با یک پنجره ورودی
+const userInput = prompt("لطفاً نام کاربری و رمزعبور خود را با کاما (,) جدا کنید:");
 
-//تفریق
-let minus = secondNumber - forNumber;
+// جدا سازی نام کاربری و رمزعبور با استفاده از کاما (,) به عنوان جداکننده
+const [username, password] = userInput.split(",");
 
-//تقسیم
-let tagsim = secondNumber / forNumber;
-
-//ضرب
-let zarb = threeNumber * forNumber;
-
-//توان
-let tavan = threeNumber **2;
-
-// باقیمانده
-let bagi = 19 % 5;
-
-alert(tavan)
+// نمایش اطلاعات وارد شده
+alert(`نام کاربری: ${username.trim()}\nرمزعبور: ${password.trim()}`);
