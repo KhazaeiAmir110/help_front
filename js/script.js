@@ -1,11 +1,8 @@
-let str1 = 'sabzlearn';
+let str1 = 'sabzlearn'
+let str2 = 'a'
 
 let num1 = 1;
 let num2 = 2;
 
-// alert(str1 - num2)
-// alert(num1 + num2)
 
-alert(typeof NaN)
-
-alert('12' / 4)
+alert(isNaN(str1 + str2));
