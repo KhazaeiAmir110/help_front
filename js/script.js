@@ -1,2 +1,2 @@
-var username = prompt("name :")
-var password = prompt("password :", [username + '_13233'])
+let username = Number(prompt("password:"));
+alert(typeof username);
