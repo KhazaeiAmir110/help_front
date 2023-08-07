@@ -1,6 +1,11 @@
-// +
+let str1 = 'sabzlearn';
 
-let siteName = 'samah.ir';
-let coursName = 'JavaScript';
+let num1 = 1;
+let num2 = 2;
 
-alert(siteName + '\n'+  coursName +'\n'+ 'salam')
+// alert(str1 - num2)
+// alert(num1 + num2)
+
+alert(typeof NaN)
+
+alert('12' / 4)
