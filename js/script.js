@@ -2,12 +2,8 @@ let num1 = 1;
 let num2 = 2;
 let num3 = 3;
 
-if (false){
-
-}else if (false){
-
-}else if (false){
-
+if (num1 + num2 == num2 || num3 + num3 == 5){
+    alert('True')
 }else {
-    alert('Three false')
+    alert('False')
 }
