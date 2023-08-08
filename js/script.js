@@ -1,16 +1,23 @@
-alert("سلام خوش اومدی به سایت ما" + '\n' + 'لطفا اطلاعات زیر را وارد کنید : ')
+// String
+let str = " I love JS"
 
-function Register(username,password ) {
-    if (username.length < 3) {
-        alert('username false!!!!!!:(')
-    }else if ( password.length < 8){
-        alert('password false!!!!:(')
-    }
-    else {
-        alert('TRUE :)')
-    }
-}
-let username = prompt('username: ','username')
-let password = prompt('password L ','password')
+//نمایش در console
+console.log(str)
 
-Register(username,password)
+// اضافه کردن به متن اصلی
+alert(str.concat('& React'))
+
+// حذف فضای خالی در ابتدا و انتها
+alert(str.trim())
+
+// کوچک کردن همه کاراکتر ها
+alert(str.toLowerCase())
+
+// بزرگ کردن تمام کاراکترها
+alert(str.toUpperCase())
+
+// سرچ شماره ایندکس حرف
+alert(str.search("I"))
+
+// بررسی کلمه که در متن هست یا خیر؟
+alert(str.includes("love"))
