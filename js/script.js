@@ -1,15 +1,16 @@
-let add1 = 4;
-let add2 = 3;
+alert("سلام خوش اومدی به سایت ما" + '\n' + 'لطفا اطلاعات زیر را وارد کنید : ')
 
-let add3 = add1 * add2;
-
-switch (add3) {
-    case 10:
-        alert('add = 10')
-        break
-    case 12:
-        alert('add = 12')
-        break
-    default :
-        alert('add != 10 , 11')
+function Register(username,password ) {
+    if (username.length < 3) {
+        alert('username false!!!!!!:(')
+    }else if ( password.length < 8){
+        alert('password false!!!!:(')
+    }
+    else {
+        alert('TRUE :)')
+    }
 }
+let username = prompt('username: ','username')
+let password = prompt('password L ','password')
+
+Register(username,password)
