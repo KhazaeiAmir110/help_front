@@ -1,9 +1,21 @@
-// String
+// method Math
 
-let text = 'I love Js & Python';
+// توان
+alert(Math.pow(2,3))
 
-// برش متن با شماره ایندکس
-alert(text.slice(7,9))
+// جذر
+alert(Math.sqrt(16))
 
-// برش با مبدا و تعداد رفتن به جلو
-alert(text.substr(7,2))
+// قدرمطلق
+alert(Math.abs(-12))
+
+// min , max
+alert(Math.min(0,3,4,5,2))
+
+//round
+//به پایین
+Math.floor()
+Math.trunc()
+Math.round()
+// به بالا
+Math.ceil()
