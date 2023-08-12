@@ -1,12 +1,17 @@
-// object
+let users = [
+    'ali',
+    'amir',
+    'reza',
+    'hasan',
+]
 
-let user = {
-    name : 'amir',
-    family : 'amiri',
-    age : 23,
-    phone : 222,
-}
-alert(user.name)
+users.forEach(function(user) {
+    alert('username : ' + user)
+})
 
-console.log(user)
-
+let number = [
+    12,13,4,5,6
+]
+number.forEach(function(add) {
+    alert(add+10)
+})
