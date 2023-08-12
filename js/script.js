@@ -1,7 +1,13 @@
 let users = [
-    'amir','ali','reza','hasan','alfa'
+    {id:1, name:'amir', age: 19},
+    {id:2, name:'ali', age: 15},
+    {id:3, name:'askhar', age: 16},
+    {id:4, name:'ahmad', age: 16},
+    {id:5, name:'asman', age: 18}
 ]
 
-alert(users.includes('amir')) // true
+users.some(function(user) {
+    alert(user.name)
 
-alert(users.includes('amir',1)) // false
+    alert(user.name=="amir")
+})
