@@ -1,17 +1,7 @@
 let users = [
-    'ali',
-    'amir',
-    'reza',
-    'hasan',
+    'amir','ali','reza','hasan','alfa'
 ]
 
-users.forEach(function(user) {
-    alert('username : ' + user)
-})
+alert(users.includes('amir')) // true
 
-let number = [
-    12,13,4,5,6
-]
-number.forEach(function(add) {
-    alert(add+10)
-})
+alert(users.includes('amir',1)) // false
