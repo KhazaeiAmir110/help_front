@@ -1,0 +1,22 @@
+/*Element*/
+p{
+    color: deepskyblue;
+}
+
+/*ID*/
+#mytext{
+    color: cornflowerblue;
+    font-size: xx-large;
+    font-family: 'Arial';
+}
+#one,#two{
+    color: chocolate;
+}
+.caption{
+    stop-color: chartreuse;
+}
+.text-center .blockquote-footer{
+    text-align: center;
+    color: blue;
+    font-size: x-large;
+}
