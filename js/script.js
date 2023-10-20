@@ -10,4 +10,5 @@ users.some(function(user) {
     alert(user.name)
 
     alert(user.name=="amir")
+    alert(user.id==1)
 })
