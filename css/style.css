@@ -5,14 +5,8 @@ body{
 .myia{
     width: 100%;
     height: 500px;
-    /*address*/
-    background-image: url("../images/raw-chicken-179367-2.jpg");
-    /*size image*/
     background-size: 20%;
-    /*no تکرار*/
-    background-repeat: no-repeat;
-    /*scroll*/
-    background-attachment: fixed;
-    /*کجای صفحه قرار بگیرد*/
-    background-position: center;
+     /*background shorthand*/
+    /*colo-image-repeat-attachment-position*/
+    background: url("../images/raw-chicken-179367-2.jpg") no-repeat fixed center;
 }
