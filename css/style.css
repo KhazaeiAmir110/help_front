@@ -1,22 +1,18 @@
-/*Element*/
-p{
-    color: deepskyblue;
+body{
+    font-family: "B Nazanin";
+    font-size: 24px;
 }
-
-/*ID*/
-#mytext{
-    color: cornflowerblue;
-    font-size: xx-large;
-    font-family: 'Arial';
-}
-#one,#two{
-    color: chocolate;
-}
-.caption{
-    stop-color: chartreuse;
-}
-.text-center .blockquote-footer{
-    text-align: center;
-    color: blue;
-    font-size: x-large;
+.myia{
+    width: 100%;
+    height: 500px;
+    /*address*/
+    background-image: url("../images/raw-chicken-179367-2.jpg");
+    /*size image*/
+    background-size: 20%;
+    /*no تکرار*/
+    background-repeat: no-repeat;
+    /*scroll*/
+    background-attachment: fixed;
+    /*کجای صفحه قرار بگیرد*/
+    background-position: center;
 }
