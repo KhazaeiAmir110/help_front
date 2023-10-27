@@ -60,3 +60,39 @@
 .banner-btn a:hover span{
     width: 100%;
 }
+#sideNave{
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    right: -200px;
+    top: 0;
+    background:  linear-gradient(rgba(200, 20, 208, 0.8), rgba(0, 243, 253, 0.8));
+    z-index: 2;
+    transition: 0.6s;
+}
+nav ul li{
+    list-style: none;
+    margin: 50px 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+#menoBtn{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+#menoBtn img{
+    width: 45px;
+    margin-top: 40px;
+}
