@@ -9,9 +9,9 @@
     font-family: 'irsans', serif ;
 }
 #banner{
-    background-size: cover;
-    background:  linear-gradient(to bottom, rgba(200, 59, 189, 0.14), rgba(200, 59, 189, 0.3)), url("Photo/banner.jpeg");
+    background:  linear-gradient(rgba(200, 20, 208, 0.25), rgba(0, 243, 253, 0.25)), url("Photo/banner.jpg");
     background-position: center;
+    background-size: cover;
     height:100vh;
 }
 .logo{
@@ -22,13 +22,41 @@
 }
 .banner-text{
     text-align: center;
-    color: cornsilk;
+    color: darkmagenta;
     padding-top: 190px;
 }
 .banner-text h1{
-    font-size: 120px;
+    font-size: 90px;
 }
 .banner-text p{
-    font-size: 30px;
-    padding-top: 150px;
+    font-size: 20px;
+    padding-top: 100px;
+}
+.banner-btn{
+    margin:100px 545px;
+}
+.banner-btn a{
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: indigo;
+    border: 0.5px solid floralwhite;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+.banner-btn a span{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: lemonchiffon;
+    z-index: -1;
+    transition: 0.5s;
+}
+.banner-btn a:hover span{
+    width: 100%;
 }
