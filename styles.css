@@ -53,7 +53,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: lemonchiffon;
+    background: #ffffff;
     z-index: -1;
     transition: 0.5s;
 }
@@ -129,6 +129,7 @@ nav ul li a{
 }
 .title-text h1{
     font-size:40px;
+    margin: 20px;
 }
 .title-text h1:hover{
     color: #8b55f5;
@@ -148,7 +149,7 @@ nav ul li a{
     flex-basis: 50%;
 }
 .features-img{
-    flex-basis: 50%;
+    flex-basis: 40%;
     margin: auto;
 }
 .features-img img{
