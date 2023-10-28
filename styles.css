@@ -263,6 +263,7 @@ hr{
     box-shadow: 0 10px 20px 3px lightcoral;
     cursor: pointer;
    text-align: right;
+    transition: 1s;
 }
 .testimonial-col p{
     font-size: 14px;
@@ -276,4 +277,7 @@ hr{
     width: 40px;
     margin-right: 20px;
     border-radius: 3px;
+}
+.testimonial-col:hover{
+    transform: translateY(-10px);
 }
