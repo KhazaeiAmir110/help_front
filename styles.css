@@ -177,7 +177,7 @@ nav ul li a{
 #services{
     width: 100%;
     padding: 70px 0;
-    background: #ffffff;
+    background: rgba(230, 228, 228, 0.65);
 }
 .service-box{
     width: 85%;
@@ -240,4 +240,40 @@ hr{
 .service-desc h1{
     font-weight: bold;
     font-size: 30px;
+}
+
+/*testimonial*/
+#testimonial{
+    width: 100%;
+    padding: 70px 0;
+}
+.testimonial-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.testimonial-col{
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px lightcoral;
+    cursor: pointer;
+   text-align: right;
+}
+.testimonial-col p{
+    font-size: 14px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.user img{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
 }
