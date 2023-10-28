@@ -192,8 +192,48 @@ nav ul li a{
     border-radius: 7px;
     margin-bottom: 30px;
     color: #844747;
+    position: relative;
 }
 .single-service img{
     width: 100%;
     border-radius: 7px;
+}
+/*هایلایت برای سرویس*/
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(200, 20, 208, 0.6), rgba(0, 243, 253, 0.6));
+    opacity: 0;
+    transition: 1.5s;
+}
+.single-service:hover .overlay{
+    opacity: 1;
+}
+/*text service*/
+.service-desc{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 1.5s;
+}
+.single-service:hover .service-desc{
+    opacity: 1;
+    bottom: 80%;
+}
+hr{
+    background: ;
+    height: ;
+    border: ;
+    margin: ;
+    width: ;
+}
+.service-desc p{
+    font-size: ;
 }
