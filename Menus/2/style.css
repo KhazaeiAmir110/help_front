@@ -1,0 +1,45 @@
+@font-face {
+    font-family: irsans;
+    src: url("/fonts/Far_Nazanin.ttf");
+}
+*{
+    font-family: Nazanin, sans-serif;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    margin: 25px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 10px;
+    /* ثابت ماندن هنگام scroll */
+    position: fixed;
+    top: 0;
+    width: 95%;
+  }
+  
+  li {
+    float: right;
+    font-size: 25px;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 17px 25px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+    border-radius: 10px;
+  }
+  ul .logo{
+    float: left;
+    font-size: 30px;
+    padding: 1px 2px;
+  }
