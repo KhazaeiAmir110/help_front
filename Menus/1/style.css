@@ -2,3 +2,51 @@
     font-family: irsans;
     src: url("/fonts/irsans.ttf");
 }
+*{
+    font-family: irsans;
+}
+body{
+    direction: rtl;
+}
+header{
+    height: 100vh;
+    background-color: rgb(2, 0, 36);
+    background-image: linear-gradient(90deg, rgba(31, 127, 236, 0.163) 40%, rgba(45, 157, 134, 0.1)100%), url(./image/pexels-pixabay-315938.jpg);
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3px 0 ;
+}
+nav ul{
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255,255,255, 0.1) 0%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 75%, rgba(255,255,255,0.1) 100%);
+    box-shadow: 0 0 25px rgba(0,0,0,0.1), inset 0 0 1px rgba(255,255,255,0.6);
+    border-radius: 20px;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    padding: 18px;
+    color: antiquewhite;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    font-size: 25px;
+    transition: 0.7s;
+}
+nav ul li a:hover{
+    color: rgb(79,224,200,0.7);
+    background: rgba(255,255,255, 0.1);
+    box-shadow: 0 0 25px rgba(0,0,0,0.1), inset 0 0 1px rgba(255,255,255,0.6);
+    /* هلالی کردن */
+    border-radius: 70px;
+}
+header h1, p{
+    text-align: center;
+    color: aliceblue;
+    font-size: 90px;
+}
