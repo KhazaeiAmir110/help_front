@@ -1,0 +1,9 @@
+body{
+    background-image: linear-gradient(to bottom, rgba(200, 59, 189, 0.1), rgba(200, 59, 189, 0.1)),url('../image/photo1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+nav{
+    
+}
