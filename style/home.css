@@ -54,3 +54,35 @@ h1{
 h1:hover{
     color: blue;
 }
+
+/* button */
+.button {
+    background-color: rgba(213, 252, 255, 0.905); 
+    color: black; 
+    border: 2px solid #008CBA;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    font-size: 40px;
+    border-radius: 10px;
+  }
+  
+.button:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  .button1 {
+    background-color: rgba(213, 252, 255, 0.905); 
+    color: black; 
+    border: 2px solid #008CBA;
+    position: fixed;
+    top: 60%;
+    left: 35%;
+    font-size: 40px;
+    border-radius: 10px;
+  }
+  
+.button1:hover {
+    background-color: #008CBA;
+    color: white;
+  }
