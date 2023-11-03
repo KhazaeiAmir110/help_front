@@ -1,0 +1,81 @@
+@font-face {
+  font-family: irsans;
+  src: url("../font/irsans.ttf");
+}
+body {
+  background: #ABCDEF;
+  font-family: irsans;
+  display: flex;
+  min-height: 90vh;
+}
+.login {
+  color: white;
+  background: 
+    -webkit-linear-gradient(to right, #72eee3, #72eee3);
+  background: 
+    linear-gradient(to right, #2b6479fa, #47a59d);
+  margin: auto;
+  box-shadow: 
+    20px 2px 10px rgba(102, 190, 234, 0.758), 
+    20px 10px 20px rgb(135, 202, 233), 
+    20px 30px 60px 1px rgb(91, 199, 245);
+  border-radius: 10px;
+  padding: 100px;
+}
+.login .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login .head .company {
+  font-size: 60px;
+}
+.login .msg {
+  text-align: center;
+}
+.login .form input[type=text].text {
+  border: none;
+  background: none;
+  box-shadow: 0px 2px 0px 0px white;
+  width: 100%;
+  color: white;
+  font-size: 30px;
+  outline: none;
+}
+.login .form .text::placeholder {
+  color: #D3D3D3;
+}
+.login .form input[type=password].password {
+  border: none;
+  background: none;
+  box-shadow: 0px 2px 0px 0px white;
+  width: 100%;
+  color: white;
+  font-size: 30px;
+  outline: none;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.login .form .password::placeholder {
+  color: #D3D3D3;
+}
+.login .form .btn-login {
+  background: none;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0px 0px 4px 2px white;
+  border-radius: 10px;
+  padding: 5px 2em;
+  transition: 0.6s;
+  font-size: 20px;
+}
+.login .form .btn-login:hover {
+  background: white;
+  color: dimgray;
+  transition: 0.6s;
+}
+.login .forgot {
+  text-decoration: none;
+  color: white;
+  float: right;
+}
