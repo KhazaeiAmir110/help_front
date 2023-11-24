@@ -10,3 +10,26 @@ h1{
     border-radius: 10px;
 
 }
+p{
+    text-align: center;
+    word-spacing: 2px;
+}
+table{
+    height: 100px;
+}
+.top{
+    vertical-align: top;
+}
+.botton{
+    vertical-align: bottom;
+}
+.link{
+    text-decoration: none;
+    text-shadow: 5px 3px 1px darkslateblue;
+}
+#test{
+    background-color: aqua;
+    color: blueviolet;
+    font-size: 40px;
+    line-height: 60px;
+}
