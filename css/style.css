@@ -1,35 +1,27 @@
 body{
     font-family: "B Nazanin";
     font-size: 24px;
+    height: 600px;
+    background-image: url('../images/raw-chicken-179367-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 h1{
-    /*border-width: 2px;*/
+    /* border-width: 2px; */
     /*border-style: solid;*/
-    /*border-color: chartreuse;*/
+    /*border-color: chartreuse; */
     border: 2px solid chartreuse;
     border-radius: 10px;
 
 }
-p{
+#p1{
     text-align: center;
     word-spacing: 2px;
 }
-table{
-    height: 100px;
-}
-.top{
-    vertical-align: top;
-}
-.botton{
-    vertical-align: bottom;
-}
-.link{
-    text-decoration: none;
-    text-shadow: 5px 3px 1px darkslateblue;
-}
-#test{
-    background-color: aqua;
-    color: blueviolet;
-    font-size: 40px;
-    line-height: 60px;
+#p2{
+    border: 5px outset aquamarine;
+    background-color: rgb(76, 111, 182);
+    color: aliceblue;
 }
