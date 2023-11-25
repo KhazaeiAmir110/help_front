@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animeh</title>
+    <style>
+        #test{
+            width: 200px;
+            height: 200px;
+            background-color: chartreuse;
+            animation-name: test;
+            animation-duration: 4s;
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            position: relative;
+        }
+        @keyframes test {
+            0% { background-color: aqua;left:0;}
+            50% { background-color: blueviolet; left:200px;}
+            100% { background-color:chartreuse; left:0;}
+        }
+    </style>
+</head>
+<body>
+    <div id="test">
+
+    </div>
+</body>
+</html>
