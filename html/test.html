@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+         h1{
+            text-shadow: 2px 2px 2px #702727, 0 1px 9px #702727;
+            text-align: center;
+        }
+        #test{
+            width: 500px;
+            height: 500px;
+            background-image: linear-gradient(30deg, blue, rgb(9, 255, 255));
+            border-radius: 20px;
+            color: aliceblue;
+            font-size: 40px;
+            margin: auto;
+            /* text => center */
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            /* shadow */
+            box-shadow: 10px 20px 20px #3ba59eba,-10px -20px 20px #3ba59eba;
+
+            /* hover */
+            transition-duration: 4s;
+            transition-delay: 1s;
+        }
+        #test:hover{
+            transform: rotate(45deg);
+        }
+        .card{
+            width: 500px;
+            margin: auto;
+            text-align: center;
+            box-shadow: 5px 10px 10px #3ba59eba,-5px -10px 10px #3ba59eba
+        }
+        .text{
+            padding: auto;
+            font-size: 30px;
+            box-shadow: 1px 2px 5px #77ddcaba,-1px -2px 5px #77ddcaba;
+        }
+        .text:hover{
+            box-shadow: 1px 2px 10px #77ddad,-1px -2px 10px #77ddad;
+        }
+        .card:hover{
+            box-shadow: 10px 20px 20px #3ba59eba,-10px -20px 20px #3ba59eba;
+        }
+    </style>
+</head>
+<body>
+    <h1>test shadow text</h1>
+    <div id="test">
+        border-radius
+        <br>
+        box-shadow
+    </div>
+    <br><br><br>
+    <div class="card">
+        <img src="../images/card.jpg" width="100%">
+        <div class="text"><p>text card</p></div>
+    </div>
+</body>
+</html>
