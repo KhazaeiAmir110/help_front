@@ -1,14 +1,15 @@
-let users = [
-    {id:1, name:'amir', age: 19},
-    {id:2, name:'ali', age: 15},
-    {id:3, name:'askhar', age: 16},
-    {id:4, name:'ahmad', age: 16},
-    {id:5, name:'asman', age: 18}
-]
+const obj1 = {
+    age:14,
+    test:() => 23 + 23
+}
 
-users.some(function(user) {
-    alert(user.name)
+alert(obj1.age)
+alert(obj1.test())
 
-    alert(user.name=="amir")
-    alert(user.id==1)
-})
+
+let array1 = [34,23,23,13,63,63]
+let array2 = new Array()
+
+alert(array1)
+array2.push(34)
+alert(array2)
