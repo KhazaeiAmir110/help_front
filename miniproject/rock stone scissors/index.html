@@ -9,22 +9,22 @@
 <body>
     <div class="grid-container">
         <div class="items_box">
-          <h1>Choose your weapon</h1>
+          <h1>: انتخاب کنید </h1>
           <div class="images_contain">
             <img src="./images/paper.png" class="img-items" alt="paper">
             <img src="./images/rock.png" class="img-items" alt="rock">
             <img src="./images/scissors.png" class="img-items" alt="scissors">
           </div>
-          <h2>cpu choosed : </h2>
+          <h2>: CPU انتخاب </h2>
           <img src="./images/paper.png" class="img-cpu-choosed hidden" alt="paper">
           <img src="./images/rock.png" class="img-cpu-choosed hidden" alt="">
           <img src="./images/scissors.png" class="img-cpu-choosed hidden" alt="">
         </div>
-        <div class="result_box">
-          <h1>points:</h1>
+        <div class="result_box" id="result_box">
+          <h1>: نتیجه</h1>
           <div class="result_container">
             <div class="user-point-container">
-              <h2>USER:</h2>
+              <h2>: کاربر</h2>
               <div id="user-point">
                 0
               </div>
@@ -38,7 +38,7 @@
           </div>
         </div>
 
-        <button>Refresh</button>
+        <button onclick=refresh()>Refresh</button>
     </div>
 
     <script src="./script.js"></script>
