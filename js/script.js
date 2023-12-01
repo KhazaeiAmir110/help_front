@@ -1,15 +1,14 @@
-const user = {
-    firstname : 'Ahmad',
-    lastname : 'Ahmadi',
-    age : 36,
-}
+const array = [1,2,3];
 
-const user1 = {
-    test : function red(city) {
-        alert(this.firstname + city)
-    }
-}
+const [a,b,c] = array;
 
-// Difference call and apply
-user1.test.call(user, 'Qom')
-user1.test.apply(user, ['qom'])
+console.log(a,b,c);
+
+
+function test(){
+    return [4,5,6,7,8,9,10,11,12,13]
+};
+
+const [q,w,e,r,t,y,u,ur,i,io] = test();
+
+console.log(q,w,e,r,t,y,u,ur,i,io);
