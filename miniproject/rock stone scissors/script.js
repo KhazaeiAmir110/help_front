@@ -41,6 +41,7 @@ function gamelogic(user,cpu){
         else if (user===1){
             if (cpu===0){
                 cpupoint.innerHTML = Number(cpupoint.innerHTML) + 1
+                document.getElementById('result_box').style.backgroundColor = '#f44747'
             }else{
                 userpoint.innerHTML = Number(userpoint.innerHTML) + 1
                 document.getElementById('result_box').style.backgroundColor = '#7df275'
@@ -52,6 +53,7 @@ function gamelogic(user,cpu){
                 document.getElementById('result_box').style.backgroundColor = '#7df275'
             }else{
                 cpupoint.innerHTML = Number(cpupoint.innerHTML) + 1
+                document.getElementById('result_box').style.backgroundColor = '#f44747'
             }
         }
     }else{
@@ -66,3 +68,9 @@ function refresh(){
         cpuimages[i].classList.add("hidden")
     }
 }
+
+document.addEventListener('keydown', (e)=>{
+    if(e.key == 'Enter'){
+        refresh()
+    }
+})
