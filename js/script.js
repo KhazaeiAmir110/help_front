@@ -1,14 +1,17 @@
-let mySet = new Set([4,32,2,1]);
+let mymap = new Map()
 
-mySet.add(3)
-mySet.add(1)
-mySet.add(1)
-// size mySet = 5
-mySet.delete(3)
+mymap.set('name' , 'ali')
+mymap.set('type' , 'man')
+mymap.set('age' , 25)
 
-console.log(mySet) // {4,32,2,1}
-console.log(mySet.size) // 4
-console.log(mySet.has(1)) // true
+console.log(mymap)
 
-mySet.clear() // clear
-console.log(mySet) 
+console.log(mymap.get('name')) // ali
+
+console.log(mymap.has('type')) // type
+
+mymap.delete('type')
+console.log(mymap)
+
+mymap.clear() // clear
+console.log(mymap) // size = 0
