@@ -1,17 +1,9 @@
-let mymap = new Map()
+const math = Math
+console.log(math.PI) // 3.14
+console.log(math.E) // 2.7
+console.log(math.log10(10)) // 1
+console.log(math.log2(256)) // 8
+console.log(math.sinh(30*math.PI/180)) // 0.5
+console.log(math.cosh(30*math.PI/180)) // 1
+console.log(math.floor(math.random()*10)) //random code 1 - 10
 
-mymap.set('name' , 'ali')
-mymap.set('type' , 'man')
-mymap.set('age' , 25)
-
-console.log(mymap)
-
-console.log(mymap.get('name')) // ali
-
-console.log(mymap.has('type')) // type
-
-mymap.delete('type')
-console.log(mymap)
-
-mymap.clear() // clear
-console.log(mymap) // size = 0
