@@ -1,14 +1,14 @@
-const array = [1,2,3];
+let mySet = new Set([4,32,2,1]);
 
-const [a,b,c] = array;
+mySet.add(3)
+mySet.add(1)
+mySet.add(1)
+// size mySet = 5
+mySet.delete(3)
 
-console.log(a,b,c);
+console.log(mySet) // {4,32,2,1}
+console.log(mySet.size) // 4
+console.log(mySet.has(1)) // true
 
-
-function test(){
-    return [4,5,6,7,8,9,10,11,12,13]
-};
-
-const [q,w,e,r,t,y,u,ur,i,io] = test();
-
-console.log(q,w,e,r,t,y,u,ur,i,io);
+mySet.clear() // clear
+console.log(mySet) 
