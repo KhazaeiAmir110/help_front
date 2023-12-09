@@ -1,20 +1,22 @@
-// Object Oriented
-
-class Users {
-    constructor(name, age, password) {
+class Person{
+    constructor(name, age){
         this.name = name;
         this.age = age;
-        this.password = password;
     }
-    showAge(){
-        let data = new Date();
-        let year = data.getFullYear();
-        let result = year - this.age;
-        console.log(result);
+    birthDate(){
+        let date = new Date()
+        let year = date.getFullYear()
+        let result = year - this.age
+        console.log(result)
     }
 }
 
-let user_1 = new Users('amir',21,123)
+class Student extends Person{
+    constructor(name,age,gender){
+        super(name,age)
+        this.gender = gender;
+    }
+}
 
-console.log(user_1.age)
-user_1.showAge()
+let studeent_1= new Student('amir', 12, 'man')
+console.log(studeent_1)
