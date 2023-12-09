@@ -3,20 +3,14 @@ class Person{
         this.name = name;
         this.age = age;
     }
-    birthDate(){
-        let date = new Date()
-        let year = date.getFullYear()
-        let result = year - this.age
-        console.log(result)
+    get getName(){
+        return this.name;
+    }
+    set setName(name){
+        this.name = name;
     }
 }
 
-class Student extends Person{
-    constructor(name,age,gender){
-        super(name,age)
-        this.gender = gender;
-    }
-}
-
-let studeent_1= new Student('amir', 12, 'man')
-console.log(studeent_1)
+let person = new Person('amir',22)
+person.setName = 'ali'
+console.log(person.getName)
