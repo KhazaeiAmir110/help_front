@@ -1,16 +1,15 @@
-class Person{
-    constructor(name, age){
-        this.name = name;
-        this.age = age;
-    }
-    get getName(){
-        return this.name;
-    }
-    set setName(name){
-        this.name = name;
-    }
-}
+//  Clock
 
-let person = new Person('amir',22)
-person.setName = 'ali'
-console.log(person.getName)
+setInterval(clock , 3000)
+
+function clock(){
+    let data = new Date()
+    let hour = data.getHours()
+    let minute = data.getMinutes()
+    let second = data.getSeconds()
+    let millisecond = data.getMilliseconds()
+    if (second < 10) {
+        second = `0${minute}`
+    }
+    document.getElementById('clock').innerHTML = `${hour}:${minute}:${second}:${millisecond}`
+}
