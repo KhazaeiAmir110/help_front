@@ -1,15 +1,11 @@
-//  Clock
+let mypromise = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        resolve('test promise')
+    }, 3000)
+})
 
-setInterval(clock , 3000)
-
-function clock(){
-    let data = new Date()
-    let hour = data.getHours()
-    let minute = data.getMinutes()
-    let second = data.getSeconds()
-    let millisecond = data.getMilliseconds()
-    if (second < 10) {
-        second = `0${minute}`
-    }
-    document.getElementById('clock').innerHTML = `${hour}:${minute}:${second}:${millisecond}`
-}
+mypromise.then((value)=>{
+    console.log(value)
+},()=>{
+    console.log('Error Promise')
+})
