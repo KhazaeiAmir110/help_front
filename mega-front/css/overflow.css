@@ -1,0 +1,13 @@
+.overflow{
+    background-color: chartreuse;
+    font-size: 30px;
+
+    width: 50%;
+    height: 300px;
+
+    /*overflow: hidden; !*پنهان کردن متن اضافه*!*/
+
+    /*overflow: scroll;*/
+
+    overflow: auto; /* auto and scroll */
+}
