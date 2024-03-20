@@ -1,0 +1,15 @@
+.flex{
+    display: flex;
+}
+
+.item_1, .item_2, .item_3{
+    background-color: #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 2px;
+    text-align: center;
+    flex: 1;
+}
+.item_3{
+    flex: 3;
+}
