@@ -1,5 +1,8 @@
-.flex{
+.flex_1{
     display: flex;
+    /*justify-content: flex-start; !*چینش مقادیر از چپ به راست*!*/
+    /*justify-content: flex-end; !*چینش از راست به چپ*!*/
+    justify-content: center; /*چینش در وسط*/
 }
 
 .item_1, .item_2, .item_3{
@@ -8,8 +11,26 @@
     margin: 10px;
     border-radius: 2px;
     text-align: center;
-    flex: 1;
+    /*flex: 1;*/
+    flex-basis: 1px;
 }
 .item_3{
+    /*flex: 3;*/
+}
+
+.flex_2{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item4,.item1{
+    background-color: cornflowerblue;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 3px;
+    text-align: center;
+    flex: 1;
+}
+.item1{
     flex: 3;
 }
