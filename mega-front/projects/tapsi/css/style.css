@@ -1,11 +1,48 @@
 @import url(./base.css);
 
-
+/* Header */
 .main_menu {
     background-color: #f8f8f8;
     border-bottom: 1px solid #ddd;
     height: 60px;
     padding: 0 10%;
+    display: flex;
+    align-items: center;
+}
+
+.menu_items{
+    display: flex;
+}
+
+.list_menu_item{
+    margin: 0 10px;
+    font-size: 15px;
+}
+
+.navbar_header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.part_left_menu_nav{
+    display: flex;
+    align-items: center;
+}
+
+.btn_menu{
+    background-color: var(--color_main);
+    border-radius: 8px;
+    color: #fff;
+    border: none;
+    margin-right: 25px;
+    padding: 7px 40px;
+    font-family: vazir, serif;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.part_logo{
     display: flex;
     align-items: center;
 }
