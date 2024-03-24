@@ -37,9 +37,17 @@
     border: none;
     margin-right: 25px;
     padding: 7px 40px;
-    font-family: vazir, serif;
     font-size: 15px;
     line-height: 30px;
+    transition: 1s;
+    font-family: vazir-bold, serif;
+}
+
+.btn_menu:hover{
+    background-color: #fff;
+    color: var(--color_main);
+    cursor: pointer;
+    font-size: 20px;
 }
 
 .part_logo{
