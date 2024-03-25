@@ -44,10 +44,9 @@
 }
 
 .btn_menu:hover{
-    background-color: #fff;
     color: var(--color_main);
-    cursor: pointer;
-    font-size: 20px;
+    background-color: #fff;
+    border: 1px solid var(--color_main);
 }
 
 .part_logo{
