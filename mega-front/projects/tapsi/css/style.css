@@ -280,7 +280,43 @@ header{
 /* start part_advantages_tapsi */
 .main_part_advantages_tapsi{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+}
+
+.text_part_advantages_tapsi{
+    width: 40%;
+}
+
+.text_part_advantages_tapsi h1,h3{
+    margin: 55px 0 25px 0;
+    color: #4d4d4d;
+}
+
+.list_fd{
+    margin-right: 15px;
+    color: #4d4d4d;
+}
+
+.link_part_advantages_tapsi{
+    display: flex;
+}
+.btn_part_advantages_tapsi{
+    align-items: center;
+    background-color: #0065dc;
+    border-radius: 12px;
+    color: #fff;
+    display: flex;
+    font-size: 16px;
+    height: 50px;
+    justify-content: center;
+    padding: 5px 15px;
+    white-space: nowrap;
+    width: 200px !important;
+    margin: 50px 10px;
+}
+.btn_part_advantages_tapsi:hover{
+    color: #fff;
+    background-color: rgba(0, 101, 220, 0.78);
 }
 
 .img_part_advantages_tapsi{
