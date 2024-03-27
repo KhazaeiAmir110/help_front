@@ -230,3 +230,45 @@
     font-size: 17px;
     font-weight: 550;
 }
+
+/*Main Part Image Hover*/
+
+.main_img_hover{
+    margin-top: 180px;
+    background-image: url("../img/parallax.jpeg");
+    height: 180px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.part_text_img_hover{
+    width: 24.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    padding: 0 10px;
+    color: #fff;
+}
+
+.divar{
+    background-color: #fff;
+    height: 50px;
+    width: 2px;
+}
+
+.text_img_hover{
+    display: none;
+}
+
+.part_text_img_hover:hover .text_img_hover{
+    display: flex;
+    margin-top: 10px;
+}
