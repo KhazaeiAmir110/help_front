@@ -21,6 +21,9 @@ a:hover{
     color: var(--color_main);
 }
 
-li {
+.list_none {
     list-style-type: none;
+}
+.list_fd{
+    font-family: vazir-fd, serif !important;
 }

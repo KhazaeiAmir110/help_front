@@ -9,3 +9,8 @@
     src: url('../font/Vazir-Bold.woff') format('woff');
     src: url('../font/Vazir-Bold.woff2') format('woff2');
 }
+
+@font-face {
+    font-family: 'vazir-fd';
+    src: url('../font/Vazir-FD-WOL.woff2') format('woff2');
+}
