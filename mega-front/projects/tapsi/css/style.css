@@ -1,5 +1,4 @@
 @import url(./base.css);
-@import url(./responsive.css);
 
 /* Header */
 .main_menu {
@@ -167,7 +166,7 @@ header{
 }
 
 /*Part Two Page*/
-.main_part_two_page{
+.main_part_two_page, .main_part_three_page{
     display: flex;
     justify-content: space-around;
     margin-top: 250px;
