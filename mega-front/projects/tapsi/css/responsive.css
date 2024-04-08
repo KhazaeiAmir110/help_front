@@ -27,7 +27,7 @@
         font-size: 16px;
         padding: 0 15px;
     }
-    .p_part_two , .link_part_two, .btn_two{
+    .p_part_two , .link_part_two{
         font-size: 14px;
         padding: 0 15px;
     }
@@ -77,5 +77,18 @@
 
     .container{
         padding: 0 6%;
+    }
+}
+
+@media (max-width: 425px) {
+    .main_btn_item_baner{
+        flex-direction: column;
+        align-items: center;
+    }
+    .item_banner{
+        height: auto;
+    }
+    .part_btn_item_banner{
+        width: auto;
     }
 }
