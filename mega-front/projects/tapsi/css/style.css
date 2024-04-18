@@ -331,3 +331,51 @@ header{
     height: 100%;
 }
 
+/*Part_Four_page*/
+
+.part_four_page{
+    margin: 0;
+    padding: 7% 6%;
+    justify-content: space-evenly;
+}
+
+.posts_part_four{
+    display: flex;
+    padding: 25px;
+}
+
+.post_part_four{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.post_part_four:hover{
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+
+.post_part_four>a{
+    width: 70%;
+    flex-direction: row-reverse;
+}
+
+.post_part_four>a>img{
+    width: 100%;
+    border-radius: 12px;
+}
+
+.post_part_four>a>p{
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: #9b9b9b !important;
+    display: -webkit-box;
+    font-size: 18px;
+    line-height: 25px;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.post_part_four>a>h3{
+    margin: 15px 0 10px 0;
+}
