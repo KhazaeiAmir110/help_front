@@ -1,0 +1,33 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+.parent{
+    display: flex;
+    flex-direction: row; /*default*/
+
+    /*justify-content: center; وسط*/
+    /*فاصله های یکسان*/
+    justify-content: space-evenly;
+
+    /*justify-content: ; در جهت direction*/
+    /*align-items: ; خلاف جهت direction*/
+}
+
+
+.child:nth-child(1){
+    width: 100px;
+    height: 100px;
+    background-color: darkolivegreen;
+}
+.child:nth-child(2){
+    width: 100px;
+    height: 100px;
+    background-color: #024600;
+}
+.child:nth-child(3){
+    width: 100px;
+    height: 100px;
+    background-color: chartreuse;
+}
