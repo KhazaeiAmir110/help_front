@@ -42,3 +42,51 @@ header{
 .ul_two_top_bar>li{
     display: flex;
 }
+
+/*nav*/
+
+nav{
+    display: flex;
+    flex-direction: row;
+
+    height: 66px;
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+}
+
+.part_one_nav>h1{
+    font-size: 40px;
+}
+
+.part_two_nav{
+    margin-top: 14px;
+}
+.part_two_nav>ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 100px;
+
+    color: #0e0b0b;
+    font-size: 20px;
+}
+
+.part_three_nav{
+    margin-left: 300px;
+    margin-top: 14px;
+}
+.part_three_nav>ul{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.divar{
+    width: 100%;
+    height: 2px;
+    background-color: rgba(178, 176, 176, 0.38);
+}
