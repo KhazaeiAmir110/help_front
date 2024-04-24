@@ -1,0 +1,7 @@
+@import url(./font.css);
+
+*{
+    font-family: vazir, serif;
+    text-align: right;
+    direction: rtl;
+}
