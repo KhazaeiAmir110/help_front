@@ -78,7 +78,7 @@
 
 .divar{
     margin:20px 0 20px;
-    width: 100%;
+    width: 85%;
     background-color: #bec3c7;
     height: 1px;
 }
@@ -141,4 +141,24 @@
 .parent-btn-page-3{
     display: flex;
     justify-content: space-between;
+    width: 85%;
+}
+
+.form{
+    /*display: flex;*/
+    flex-wrap: wrap;
+    /*justify-content: space-between;*/
+    /*align-items: flex-start;*/
+    /*align-content: center;*/
+    width: 85%;
+
+}
+input{
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
