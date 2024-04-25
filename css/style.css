@@ -18,8 +18,31 @@
 }
 
 /* main */
+.main{
+    
+}
 
+/* part 1 main */
+.part-1-main{
+    display: flex;
+    gap: 5px;
+}
 
+.step{
+    width: 133px;
+    height: 15px;
+    background: #bec3c7;
+    margin-top: 5px;
+    border-radius: 0px 5px 5px 0 !important
+}
+
+.active{
+    color: var(--Color-main-green);
+}
+
+.active .step{
+    background-color: var(--Color-main-green);
+}
 /* footer */
 .footer{
     display: flex;
