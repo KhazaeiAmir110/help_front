@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3830577c-c39e-41f0-a418-dcc7b8a95a2a" name="Changes" comment="fix part 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="3830577c-c39e-41f0-a418-dcc7b8a95a2a" name="Changes" comment="fix part 2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +52,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "baraato",
     "ignore_missing_gitignore": "true",
-    "last_opened_file_path": "E:/Projects/Front",
+    "last_opened_file_path": "E:/Projects/Front/help_front",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
@@ -70,11 +67,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\Front\help_front" />
       <recent name="E:\Projects\Front\help_front\mega-front\projects\tapsi\font" />
       <recent name="E:\Projects\Front\help_front\mega-front\projects\meno\font" />
       <recent name="E:\Projects\Front\help_front\mega-front\projects\mini_one\img" />
       <recent name="E:\Projects\Front\help_front\Photo" />
-      <recent name="E:\Projects\Front\help_front\font" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Projects\Front\help_front\miniproject\tak\simple" />
@@ -166,7 +163,7 @@
       <workItem from="1713514028319" duration="10829000" />
       <workItem from="1713628928607" duration="7524000" />
       <workItem from="1713888916731" duration="7841000" />
-      <workItem from="1713967676539" duration="9013000" />
+      <workItem from="1713967676539" duration="9863000" />
     </task>
     <task id="LOCAL‎۰۰۰۳۶" summary="familiarity with forEach">
       <created>1691819644890</created>
@@ -462,7 +459,7 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۸۴" />
       <updated>1701006148239</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,7 +502,6 @@
     <MESSAGE value="fix project simple" />
     <MESSAGE value="start project devkit" />
     <MESSAGE value="add pipenv" />
-    <MESSAGE value="fix README.md" />
     <MESSAGE value="start project baraato" />
     <MESSAGE value="add font" />
     <MESSAGE value="set var.css" />
@@ -516,6 +512,7 @@
     <MESSAGE value="font bold" />
     <MESSAGE value="fix part one" />
     <MESSAGE value="fix list part 2" />
+    <MESSAGE value="fix README.md" />
     <MESSAGE value="fix part 2" />
     <option name="LAST_COMMIT_MESSAGE" value="fix part 2" />
   </component>
