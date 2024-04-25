@@ -4,4 +4,12 @@
     font-family: vazir, serif;
     text-align: right;
     direction: rtl;
+
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
 }
