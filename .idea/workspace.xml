@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3830577c-c39e-41f0-a418-dcc7b8a95a2a" name="Changes" comment="fix part 2" />
+    <list default="true" id="3830577c-c39e-41f0-a418-dcc7b8a95a2a" name="Changes" comment="fix part 3">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +165,7 @@
       <workItem from="1713514028319" duration="10829000" />
       <workItem from="1713628928607" duration="7524000" />
       <workItem from="1713888916731" duration="7841000" />
-      <workItem from="1713967676539" duration="9863000" />
+      <workItem from="1713967676539" duration="10906000" />
     </task>
     <task id="LOCAL‎۰۰۰۳۶" summary="familiarity with forEach">
       <created>1691819644890</created>
@@ -459,7 +461,7 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۸۴" />
       <updated>1701006148239</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,9 +491,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="gap in flex box" />
-    <MESSAGE value="mini project" />
-    <MESSAGE value="fix mini project tak" />
     <MESSAGE value="start project main misto&#10;and fix top bar" />
     <MESSAGE value="fix navbar" />
     <MESSAGE value="fix header" />
@@ -514,7 +513,10 @@
     <MESSAGE value="fix list part 2" />
     <MESSAGE value="fix README.md" />
     <MESSAGE value="fix part 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix part 2" />
+    <MESSAGE value="start part 3" />
+    <MESSAGE value="fix base.css" />
+    <MESSAGE value="fix part 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix part 3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/help_front$test.coverage" NAME="test Coverage Results" MODIFIED="1698853663294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
