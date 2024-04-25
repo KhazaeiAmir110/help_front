@@ -76,16 +76,16 @@
     border-radius: 5px;
 }
 
-.parent-btn{
-    display: flex;
-    justify-content: end;
-}
-
 .divar{
     margin:20px 0 20px;
     width: 100%;
     background-color: #bec3c7;
     height: 1px;
+}
+
+.parent-btn{
+    display: flex;
+    justify-content: end;
 }
 
 .button-green{
@@ -114,3 +114,16 @@
     font-weight: 300;
 }
 /* ----------------------------------------------------------- */
+
+/* Page 2 */
+.text-main{
+    margin: 0 0 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.text{
+    font-size: 13px;
+}
