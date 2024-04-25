@@ -28,6 +28,10 @@
     gap: 5px;
 }
 
+.font-bold{
+    font-family: vazir-bold;
+}
+
 .step{
     width: 133px;
     height: 15px;
