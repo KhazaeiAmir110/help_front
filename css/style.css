@@ -20,27 +20,28 @@
 
 /* main */
 .main{
-    
+    width:55%;
+    padding-right: 10%;
 }
 
 /* part 1 main */
 .part-1-main{
     display: flex;
-    gap: 5px;
+    gap: 3px;
     margin: 0 0 25px;
 }
 
 .font-bold{
-    font-family: vazir-bold;
+    font-family: vazir-bold, serif;
     font-size: 15px;
 }
 
 .step{
-    width: 133px;
+    width: 110px;
     height: 15px;
     background: #bec3c7;
     margin-top: 5px;
-    border-radius: 0px 5px 5px 0 !important
+    border-radius: 0 5px 5px 0 !important
 }
 
 .active{
@@ -97,8 +98,6 @@
     font-size: 20px;
     line-height: 20px;
     transition: 0.5s;
-
-    
 }
 
 
@@ -126,6 +125,7 @@
 
 .text{
     font-size: 14px;
+    width: 80%;
 }
 
 /* ------------------------------------------------------------- */
