@@ -145,20 +145,24 @@
 }
 
 .form{
-    /*display: flex;*/
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    /*justify-content: space-between;*/
-    /*align-items: flex-start;*/
-    /*align-content: center;*/
-    width: 85%;
-
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+    width: 60%;
 }
 input{
-  width: 30%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  width: 150%;
+  height: 30px;
+  margin: 15px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+.text-green{
+    color: var(--Color-main-green);
 }
