@@ -100,6 +100,7 @@
     transition: 0.5s;
 }
 
+/* ------------------------------- */
 
 /* footer */
 .footer{
@@ -131,7 +132,6 @@
 /* ------------------------------------------------------------- */
 
 /* Page 3 */
-
 .display{
     display: flex;
     flex-direction: row;
@@ -153,6 +153,7 @@
     align-content: center;
     width: 60%;
 }
+
 input{
   width: 150%;
   height: 30px;
@@ -166,3 +167,7 @@ input{
 .text-green{
     color: var(--Color-main-green);
 }
+
+/* ----------------------------------------------------------- */
+
+/* Page 4 */
