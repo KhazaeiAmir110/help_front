@@ -16,25 +16,38 @@
 </select>
 
 <p id="textToShow" style="display: none;">متن تستی لورم</p>
+<div id="text" style="display: none;">
+    <p>احسان امیری</p>
+    <p> شماره‌تلفن: 09383136996</p>
+    <p> آدرس: روبروی مسجد حضرت ابوالفضل (ع) کوچه اعتماد مقابل ساختمان پزشکان</p>
+</div>
+
+
+
+<h2  style="display: none" onchange="displayText()">==========================</h2>
+<h3>in god</h3>
+
 
 <script>
-function displayText() {
-  var selectElement = document.getElementById('mySelect');
-  var selectedValue = selectElement.value;
-  var textElement = document.getElementById('textToShow');
+    function displayText() {
+      var selectElement = document.getElementById('mySelect');
+      var selectedValue = selectElement.value;
+      var textElement = document.getElementById('textToShow');
+      var text = document.getElementById('text');
+    
+      if (selectedValue === "0") {
+        textElement.innerHTML = "متن برای همه";
+        document.querySelector('#textToShow').style.display = 'flex';
+      } else if (selectedValue === "2") {
+        textElement.innerHTML = "متن برای احسان امیری";
+        document.querySelector('#textToShow').style.display = 'inline';
 
-  if (selectedValue === "0") {
-    textElement.innerHTML = "متن برای همه";
-  } else if (selectedValue === "2") {
-    textElement.innerHTML = "متن برای احسان امیری";
-    document.querySelector('#textToShow').style.display = 'inline';
-  } else {
-    textElement.innerHTML = "متن اولیه";
-  }
-}
-</script>
-
-<h2 style="display: none">==========================</h2>
-<h3>in god</h3>
+        document.querySelector('#text').style.display = 'list-item';
+        
+      } else {
+        textElement.innerHTML = "متن اولیه";
+      }
+    }
+    </script>
 </body>
 </html>
