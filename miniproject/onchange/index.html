@@ -1,0 +1,27 @@
+<h1>Hello word</h1>
+
+<select id="mySelect" onchange="displayText()">
+  <option value="0">همه</option>
+  <option value="2">احسان امیری</option>
+</select>
+
+<p id="textToShow">متن تستی لورم</p>
+
+<script>
+function displayText() {
+  var selectElement = document.getElementById('mySelect');
+  var selectedValue = selectElement.value;
+  var textElement = document.getElementById('textToShow');
+
+  if (selectedValue === "0") {
+    textElement.innerHTML = "متن برای همه";
+  } else if (selectedValue === "2") {
+    textElement.innerHTML = "متن برای احسان امیری";
+  } else {
+    textElement.innerHTML = "متن اولیه";
+  }
+}
+</script>
+
+<h2 style="display: none">==========================</h2>
+<h3>in god</h3>
