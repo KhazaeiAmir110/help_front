@@ -58,7 +58,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 
 .list-part-2-main{
