@@ -1,3 +1,13 @@
+<!doctype html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>onchange</title>
+</head>
+<body>
 <h1>Hello word</h1>
 
 <select id="mySelect" onchange="displayText()">
@@ -5,7 +15,7 @@
   <option value="2">احسان امیری</option>
 </select>
 
-<p id="textToShow">متن تستی لورم</p>
+<p id="textToShow" style="display: none;">متن تستی لورم</p>
 
 <script>
 function displayText() {
@@ -17,6 +27,7 @@ function displayText() {
     textElement.innerHTML = "متن برای همه";
   } else if (selectedValue === "2") {
     textElement.innerHTML = "متن برای احسان امیری";
+    document.querySelector('#textToShow').style.display = 'inline';
   } else {
     textElement.innerHTML = "متن اولیه";
   }
@@ -25,3 +36,5 @@ function displayText() {
 
 <h2 style="display: none">==========================</h2>
 <h3>in god</h3>
+</body>
+</html>
