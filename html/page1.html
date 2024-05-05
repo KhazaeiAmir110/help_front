@@ -41,18 +41,24 @@
             <div class="part-2-main">
                 <div class="title-part-2-main font-bold">لطفاً آرایشگاه موردنظر را از لیست زیر انتخاب کنید</div>
                 <div class="list-part-2-main">
-                    <label class="font-bold" for="">لیست آرایشگاه ها</label>
+                    <label class="font-bold">لیست آرایشگاه ها</label>
                     <label class="lable-list-part-2">
-                        <select>
-                            <option value="0">همه</option>
-                            <option value="2">احسان امیری</option>
+                        <select id="mySelect" onchange="displayText()">
+                          <option value="0">همه</option>
+                          <option value="1">احسان امیری</option>
+                            <option value="2">آریا عظیمی</option>
                         </select>
+                        <div id="value_1" style="display: none; margin-top: 2%">
+                            <p>احسان امیری</p>
+                            <p> شماره‌تلفن: 09383136996</p>
+                            <p> آدرس: روبروی مسجد حضرت ابوالفضل (ع) کوچه اعتماد مقابل ساختمان پزشکان</p>
+                        </div>
+                        <div id="value_2" style="display: none; margin-top: 2%">
+                            <p>آریا عظیمی</p>
+                            <p> شماره‌تلفن: 09000000000</p>
+                            <p> آدرس: میدان آزادی ، نرسیده به میدان نماز کوچه 5</p>
+                        </div>
                     </label>
-                </div>
-                <div class="text">
-                    <p>احسان امیری</p>
-                    <p> شماره‌تلفن: 09383136996 </p>
-                    <p>آدرس: روبروی مسجد حضرت ابوالفضل (ع) کوچه اعتماد مقابل ساختمان پزشکان</p>
                 </div>
                 <div class="div">
                     <div class="divar"></div>
@@ -76,6 +82,7 @@
 
 
     <!-- script -->
-    <script src="../js/script.js"></script>
+    <script src="../js/script.js">
+    </script>
 </body>
 </html>
