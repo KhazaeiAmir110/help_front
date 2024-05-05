@@ -27,7 +27,7 @@
 /* part 1 main */
 .part-1-main{
     display: flex;
-    gap: 3px;
+    gap: 5px;
     margin: 0 0 25px;
 }
 
