@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3830577c-c39e-41f0-a418-dcc7b8a95a2a" name="Changes" comment="fix">
-      <change afterPath="$PROJECT_DIR$/js/object.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/DOM/getElement.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -464,7 +464,7 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۸۴" />
       <updated>1701006148239</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
