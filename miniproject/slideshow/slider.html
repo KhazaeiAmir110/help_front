@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideShow</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="img-container">
+        <div class="slid fade">
+            <div class="number">1/4</div>
+            <img src="./images/image1.png" alt="image1" width="100%" height="400px">
+            <div class="caption">Caption one</div>
+        </div>
+        <div class="slid fade">
+            <div class="number">2/4</div>
+            <img src="./images/image2.png" alt="image2" width="100%" height="400px">
+            <div class="caption">Caption two</div>
+        </div>
+        <div class="slid fade">
+            <div class="number">3/4</div>
+            <img src="./images/image3.png" alt="image3" width="100%" height="400px">
+            <div class="caption">Caption three</div>
+        </div>
+        <div class="slid fade">
+            <div class="number">4/4</div>
+            <img src="./images/image4.png" alt="image4">
+            <div class="caption">Caption fore</div>
+        </div>
+
+        <span class="prev" onclick="control(-1)">&#10094;</span>
+        <span class="next" onclick="control(1)">&#10095;</span>
+    </div>
+
+    <div class="dot-countanair">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
