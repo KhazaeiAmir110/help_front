@@ -45,3 +45,8 @@ function mOut(obj) {
     obj.innerHTML = "Mouse Over Me"
     obj.style.backgroundColor = '#ff8000'
 }
+
+// remove
+function remove() {
+    document.getElementById('remove').remove()
+}
