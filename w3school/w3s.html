@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>w3school</title>
+    <style>
+        .market-color{
+            color: green;
+        }
+        .market-background{
+            background-color: greenyellow;
+            padding: 10px;
+            font-size: 20px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <!--example-->
+    <div>
+        <button onclick="w3.hide('p')">Hide all p elements</button>
+
+        <h2>London</h2>
+        <p>London is the capital city of England.</p>
+        <p>It is the most populous city in the United Kingdom.</p>
+        <p>Population over 13 million inhabitants.</p>
+    </div>
+
+    <br><br><hr><br>
+
+    <p>
+    <button onclick="w3.hide('#London1')">Hide London</button>
+    </p>
+
+    <div id="London1" class="city">
+      <h2>London</h2>
+      <p>London is the capital city of England.</p>
+    </div>
+
+    <br><br><hr><br>
+
+    <p>
+    <button onclick="w3.addStyle('#London2','background-color','red')">Add Style</button>
+    </p>
+
+    <div id="London2" class="city">
+      <h2>London</h2>
+      <p>London is the capital city of England.</p>
+    </div>
+
+    <br><br><hr><br>
+    <button onclick="w3.addClass('.city', 'market-background')">add background</button>
+    <button onclick="w3.addClass('h2', 'market-color')">add color</button>
+
+    <br><br><hr><br>
+
+
+    <!--js-->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+</body>
+</html>
