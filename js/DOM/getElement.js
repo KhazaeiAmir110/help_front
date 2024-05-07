@@ -22,4 +22,4 @@ console.log('p : ' + div[0].innerHTML)
 document.getElementById('image').src = 'miniproject/rock%20stone%20scissors/images/rock.png'
 
 // add date
-document.getElementById('date').innerHTML = 'Date : ' + Date()
+// document.getElementById('date').innerHTML = 'Date : ' + Date()

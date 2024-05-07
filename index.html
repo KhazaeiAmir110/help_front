@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>JS</title>
 </head>
-<body onclick="this.style.backgroundColor='#5ba1da'">
+<body onclick="changeBackground(this)">
     <H1 align="center"> شروع جاوا اسکریپت </H1>
-    <h1>Title two</h1>
+    <h1 onclick="changeText(this)">Title two</h1>
     <H2 id="clock"></H2>
     <button onclick="this.style.backgroundColor='green'">Strart</button>
 
@@ -16,6 +16,7 @@
             <p>
                 Hellow
             </p>
+            <button id="btn-dat">click</button>
             <p id="date"></p>
         </div>
     </div>
@@ -23,5 +24,6 @@
     <!-- js -->
     <script src="js/age.js"></script>
     <script src="js/DOM/getElement.js"></script>
+    <script src="js/DOM/events.js"></script>
 </body>
 </html>
