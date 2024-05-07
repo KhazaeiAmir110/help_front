@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body onclick="changeBackground(this)">
+    <div>
+        <H1 align="center"> شروع جاوا اسکریپت </H1>
+        <h1 onclick="changeText(this)">Title two</h1>
+        <H2 id="clock"></H2>
+        <button onclick="this.style.backgroundColor='green'">Strart</button>
+    </div>
+    <br><br>
+        <hr>
+
+    <div class="div-class">
+        <div id="div-id">
+            <img id="image" src="miniproject/rock%20stone%20scissors/images/paper.png" alt="" width="210" height="210">
+            <p>
+                Hellow
+            </p>
+            <button id="btn-dat">click</button>
+            <p id="date"></p>
+        </div>
+        <br><br>
+        <hr>
+
+        <!-- input -->
+        <div class="inpu">
+            name : <label>
+                        <input type="text" name="name" oninput="input(this)">
+                   </label>
+            <p id="p-input">Hello user!!!</p>
+
+        <!-- right upper -->
+            uopper : <label>
+                        <input type="text" id="name-upper" oninput="upper()">
+                   </label>
+
+        <!-- onchange -->
+            upper-click : <label>
+                        <input type="text" id="name-click" onchange="upperclick()">
+                   </label>
+        </div>
+
+
+        <br><br>
+        <hr>
+        <!-- mouse -->
+        <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+            style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+            Mouse Over Me
+        </div>
+
+        <br><br>
+        <hr>
+        <button onclick="remove()">remove text ...</button>
+        <!-- remove -->
+        <div id="remove">
+            <h1>Hellow</h1>
+            <h3>hellow</h3>
+            <p>ia am amir</p>
+        </div>
+    </div>
+
+    <br><br>
+        <hr>
+    <!-- querySelector -->
+    <div>
+        <p id="p-selector">id selector</p>
+        <p class="p-selector">class selector</p>
+        <p>p selector</p>
+        <h5>h5</h5>
+        <h6>h6</h6>
+    </div>
+
+    <!-- js -->
+    <script src="js/age.js"></script>
+    <script src="js/DOM/getElement.js"></script>
+    <script src="js/DOM/events.js"></script>
+    <script src="js/DOM/querySelector.js"></script>
+</body>
+</html>

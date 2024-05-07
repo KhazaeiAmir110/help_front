@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>onchange</title>
+</head>
+<body>
+<h1>Hello word</h1>
+
+<select id="mySelect" onchange="displayText()">
+  <option value="0">همه</option>
+  <option value="2">احسان امیری</option>
+</select>
+
+<p id="textToShow" style="display: none;">متن تستی لورم</p>
+<div id="text" style="display: none;">
+    <p>احسان امیری</p>
+    <p> شماره‌تلفن: 09383136996</p>
+    <p> آدرس: روبروی مسجد حضرت ابوالفضل (ع) کوچه اعتماد مقابل ساختمان پزشکان</p>
+</div>
+
+
+
+<h2  style="display: none" onchange="displayText()">==========================</h2>
+<h3>in god</h3>
+
+
+<script>
+    function displayText() {
+      var selectElement = document.getElementById('mySelect');
+      var selectedValue = selectElement.value;
+      var textElement = document.getElementById('textToShow');
+      var text = document.getElementById('text');
+    
+      if (selectedValue === "0") {
+        textElement.innerHTML = "متن برای همه";
+        document.querySelector('#textToShow').style.display = 'flex';
+      } else if (selectedValue === "2") {
+        textElement.innerHTML = "متن برای احسان امیری";
+        document.querySelector('#textToShow').style.display = 'inline';
+
+        document.querySelector('#text').style.display = 'list-item';
+        
+      } else {
+        textElement.innerHTML = "متن اولیه";
+      }
+    }
+    </script>
+</body>
+</html>
