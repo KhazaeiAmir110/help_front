@@ -34,3 +34,14 @@ function upperclick() {
   const x = document.getElementById("name-click");
   x.value = x.value.toUpperCase();
 }
+
+// mouse
+function mOver(obj) {
+    obj.innerHTML = "Thank You"
+    obj.style.backgroundColor = '#47ff00'
+}
+
+function mOut(obj) {
+    obj.innerHTML = "Mouse Over Me"
+    obj.style.backgroundColor = '#ff8000'
+}
