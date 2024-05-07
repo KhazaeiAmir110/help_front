@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3830577c-c39e-41f0-a418-dcc7b8a95a2a" name="Changes" comment="fix">
-      <change afterPath="$PROJECT_DIR$/js/DOM/getElement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="3830577c-c39e-41f0-a418-dcc7b8a95a2a" name="Changes" comment="work with getElement" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -464,7 +460,7 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۸۴" />
       <updated>1701006148239</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +490,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix project css" />
     <MESSAGE value="fix project simple" />
     <MESSAGE value="start project devkit" />
     <MESSAGE value="add pipenv" />
@@ -519,7 +514,8 @@
     <MESSAGE value="fix page 5" />
     <MESSAGE value="fix page 4" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="work with getElement" />
+    <option name="LAST_COMMIT_MESSAGE" value="work with getElement" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/help_front$test.coverage" NAME="test Coverage Results" MODIFIED="1698853663294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
