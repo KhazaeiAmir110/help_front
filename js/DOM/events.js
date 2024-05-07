@@ -17,3 +17,20 @@ function date() {
     document.getElementById('date').innerHTML = Date();
 }
 
+// oninput
+function input(id) {
+    const name = id.value;
+    document.getElementById('p-input').innerHTML = 'Hello  '+name+'!!!'
+}
+
+// Upper
+function upper() {
+    const input = document.getElementById('name-upper');
+    input.value = input.value.toUpperCase();
+}
+
+
+function upperclick() {
+  const x = document.getElementById("name-click");
+  x.value = x.value.toUpperCase();
+}
