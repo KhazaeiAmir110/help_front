@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>date picker</title>
+    <link rel="stylesheet" href="jalalidatepicker.css">
+</head>
+<body>
+    <h1 style="text-align:center">jalali datePicker - دیت پیکر شمسی</h1>
+    <div style="display: flex; gap: 30px; flex-direction: column; align-items: center">'
+        <label>
+            <input type="text" data-jdp placeholder="لطفا یک تاریخ وارد نمایید" />
+        </label>
+        <label>
+            <input type="text" data-jdp data-jdp-min-date="today" placeholder="نمایش تاریخ از امروز" />
+        </label>
+        <label>
+            <input type="text" data-jdp data-jdp-max-date="today" placeholder="نمایش تاریخ تا امروز" />
+        </label>
+        <label>
+            <input type="text" data-jdp data-jdp-max-date="1401/10/08" placeholder="نمایش تاریخ تا 1401/10/08" />
+        </label>
+
+    </div>
+
+<!--js-->
+    <script src="jalalidatepicker.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
