@@ -2,7 +2,9 @@
 
 var pages = {
     'home' : 'This is a home !!!!',
-    'about': 'This is a about !!!!!'
+    'about': 'This is a about !!!!!',
+    'count' : 'This is a count !!!!',
+    'me': 'This is a me !!!!!'
 };
 
 function getPage(page) {
@@ -16,6 +18,14 @@ function getPage(page) {
 
         case 'about' :
             getReturn = pages.about;
+            break;
+
+        case 'count':
+            getReturn = pages.count;
+            break;
+
+        case 'me' :
+            getReturn = pages.me;
             break;
 
         default :
