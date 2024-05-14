@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    gap: 20px;
+}
+.base{
+    width: 20%;
+    float: left;
+    background: #eee;
+    height: 100vh;
+}
+
+.base-li{
+    line-height: 50px;
+}
+
+.div-class{
+    width: 90%;
+    float: right;
+    background: #999;
+    color: #fff;
+    height: 100%;
+    font-size: 50px;
+}
+
+.p-class{
+    margin-left: 50px;
+}
