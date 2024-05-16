@@ -19,19 +19,27 @@ class User extends Component{
             age : 42
         },
     }
+
+    state_user_one = {
+        name : 'Amir',
+        family : 'KH',
+        age : 22,
+        location : 'Iran'
+    }
     render(){
-        const {state} = this
+        const {state_user_one} = this
         return (
             <>
                 <ul>
                     {
-                        Object.keys(state).map(key=>(
+                        Object.keys(state_user_one).map(key=>(
                             <li>
-                                <strong>{key}</strong>{state[key]}
+                                <strong>{key}</strong>{state_user_one[key]}
                             </li>
                         ))
                     }
                 </ul>
+                <hr /><br />
             </>
         )
     }
