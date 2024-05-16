@@ -20,21 +20,17 @@ class User extends Component{
         },
     }
     render(){
+        const {state} = this
         return (
             <>
                 <ul>
-                    <li>
-                        name : {this.state.one.name}
-                    </li>
-                    <li>
-                        name : {this.state.two.name}
-                    </li>
-                    <li>
-                        name : {this.state.three.name}
-                    </li>
-                    <li>
-                        name : {this.state.four.name}
-                    </li>
+                    {
+                        Object.keys(state).map(key=>(
+                            <li>
+                                <strong>{key}</strong>{state[key]}
+                            </li>
+                        ))
+                    }
                 </ul>
             </>
         )
@@ -42,11 +38,32 @@ class User extends Component{
 
 }
 
+class Text extends Component {
+    state = {
+        header : "This is a Header",
+        body : "Loading..."
+    }
+    render() {
+        const {header , body} = this.state
+        return (
+            <>
+                <h1>
+                    {header}
+                </h1>
+                <h3>
+                    {body}
+                </h3>
+            </>
+        )
+    }
+}
+
 export default function Test() {
     return (
         <>
             <h1>Hellow file Component</h1>
             <User />
+            <Text />
         </>
     )
 }
