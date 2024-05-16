@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Test from "./component/TestComponent";
 
 const name = "Amir"
 const element = (
@@ -20,8 +21,9 @@ class TestClass extends React.Component{
     render() {
         return (
             <>
-                <h1>Hellow Component Class</h1>;
-                {element};
+                <h1>Hellow Component Class</h1>
+                {element}
+                <Test />
             </>
         )
     }
