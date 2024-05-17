@@ -15,7 +15,7 @@ window.jdatepicker.theme.bs5 = {
     next: ['btn', 'btn-outline-secondary', 'flex-grow-1'],
     prev: ['btn', 'btn-outline-secondary', 'flex-grow-1'],
     day: ['btn', 'btn-outline-secondary', 'flex-grow-1'],
-    selected: ['bg-info', 'text-white'],
+    selected: ['bg-info.txt', 'text-white'],
     number: ['d-flex', 'justify-content-center', 'align-items-center'],
     select: ['form-select flex-grow-1'],
     table: ['table', 'm-0'],
