@@ -66,12 +66,39 @@ class Text extends Component {
     }
 }
 
+
+// Props
+class Props_Test extends Component{
+    render(){
+        return (
+            <div>
+                <h3>First Name : {this.props.fname}</h3>
+                <h3>Last Name : {this.props.lname}</h3>
+            </div>
+        )
+    }
+}
+
+// default props
+Props_Test.defaultProps = {
+    fname : 'No fname',
+    lname : 'No lname'
+}
+
+// Return
+
 export default function Test() {
     return (
         <>
             <h1>Hellow file Component</h1>
             <User />
             <Text />
+
+            <hr /><br />
+
+            {/* Props */}
+            <h1 className="titr">Props</h1>
+            <Props_Test fname='Amir' />
         </>
     )
 }
