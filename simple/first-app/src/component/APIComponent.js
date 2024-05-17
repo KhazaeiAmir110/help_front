@@ -10,17 +10,14 @@ class Api_Test extends Component{
     }
 
     setStateHandler = () => {
-        let item = 'Hellow ';
-        let myArrey = this.state.date;
-        myArrey.push(item);
-        this.setStateHandler({date:myArrey})
+        this.forceUpdate();
     }
 
     render(){
         return (
             <>
-                <button onClick={this.setStateHandler}>Add</button>
-                <p>{this.state.date}</p>
+                <button onClick={this.setStateHandler}>Update</button>
+                <p>{Math.random()}</p>
             </>
         )
     }
