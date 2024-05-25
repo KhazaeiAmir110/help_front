@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import '../roocket/CourseBox'
+import CourseBox from "../roocket/CourseBox";
 
 class User extends Component{
     state = {
@@ -99,6 +101,11 @@ export default function Test() {
             {/* Props */}
             <h1 className="titr">Props</h1>
             <Props_Test fname='Amir' />
+
+            <br />
+            {/*  Roocket  */}
+            <CourseBox title='course number one' description='this is a number course'/>
+            <CourseBox title='course number two' description='this is a number ajax' time='10s'/>
         </>
     )
 }
