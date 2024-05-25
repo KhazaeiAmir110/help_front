@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85f5ca93-a144-4933-8240-72637611e00a" name="Changes" comment="work with props by site roocket">
+    <list default="true" id="85f5ca93-a144-4933-8240-72637611e00a" name="Changes" comment="onDoubleClick">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple/first-app/src/component/APIComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/simple/first-app/src/component/APIComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple/first-app/src/roocket/CourseBox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/simple/first-app/src/roocket/CourseBox.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +97,21 @@
       <option name="presentableId" value="LOCAL‎−۰۰۰۰۱" />
       <updated>1716645988146</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL‎−۰۰۰۰۲" summary="fix bug">
+      <option name="closed" value="true" />
+      <created>1716649015425</created>
+      <option name="number" value="LOCAL‎−۰۰۰۰۲" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۰۲" />
+      <updated>1716649015425</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۰۳" summary="onDoubleClick">
+      <option name="closed" value="true" />
+      <created>1716649114347</created>
+      <option name="number" value="LOCAL‎−۰۰۰۰۳" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۰۳" />
+      <updated>1716649114347</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,7 +142,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="work with props by site roocket" />
-    <option name="LAST_COMMIT_MESSAGE" value="work with props by site roocket" />
+    <MESSAGE value="fix bug" />
+    <MESSAGE value="onDoubleClick" />
+    <option name="LAST_COMMIT_MESSAGE" value="onDoubleClick" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
