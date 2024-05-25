@@ -14,6 +14,10 @@ class Api_Test extends Component{
         document.getElementById('item1').style.color='red';
     }
 
+    doubleCluck = ()=>{
+        document.getElementById('item1').style.color='black';
+    }
+
     render(){
         return (
             <>
@@ -24,7 +28,7 @@ class Api_Test extends Component{
 
                 {/* find dom node */}
                 <h3>Find Dom Node</h3>
-                <button onClick={this.findDomNodeHandler} onDoubleClick={}>Update Color</button>
+                <button onClick={this.findDomNodeHandler} onDoubleClick={this.doubleCluck}>Update Color</button>
                 <div id="item1">This is a Item One</div>
             </>
         )
