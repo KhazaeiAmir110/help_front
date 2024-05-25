@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import '../roocket/CourseBox'
 import CourseBox from "../roocket/CourseBox";
+import CourseList from "../roocket/CourseList";
 
 class User extends Component{
     state = {
@@ -106,6 +107,11 @@ export default function Test() {
             {/*  Roocket  */}
             <CourseBox title='course number one' description='this is a number course'/>
             <CourseBox title='course number two' description='this is a number ajax' time='10s'/>
+
+
+            <hr /><br />
+            {/*  List  */}
+            <CourseList />
         </>
     )
 }
