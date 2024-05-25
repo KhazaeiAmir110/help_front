@@ -11,8 +11,7 @@ class Api_Test extends Component{
 
     // find dom node
     findDomNodeHandler = () =>{
-        let eleman = document.getElementById('itme1')
-        ReactDOM.findDOMNode(eleman).style.color = 'red'
+        document.getElementById('item1').style.color='red';
     }
 
     render(){
@@ -25,7 +24,7 @@ class Api_Test extends Component{
 
                 {/* find dom node */}
                 <h3>Find Dom Node</h3>
-                <button onClick={this.findDomNodeHandler}>Update Color</button>
+                <button onClick={this.findDomNodeHandler} onDoubleClick={}>Update Color</button>
                 <div id="item1">This is a Item One</div>
             </>
         )
