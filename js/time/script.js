@@ -56,7 +56,7 @@ let endtime = "18:00:00";
 let durationtime = 30;
 
 let timeslots = getTime(starttime, endtime, durationtime);
-console.log(timeslots);
+// console.log(timeslots);
 
 // ----------------------------------------------------------------------------
 
@@ -85,9 +85,9 @@ function GetTime(startTime, endTime, duration, excludeStart, excludeEnd) {
 
 let startTime = "10:00:00";
 let endTime = "18:00:00";
-let duration = 30; // مدت زمان به ثانیه (30 دقیقه)
+let duration = 120; // مدت زمان به ثانیه (30 دقیقه)
 let excludeStart = "12:00:00";
 let excludeEnd = "13:30:00";
 
-let timeSlots = GetTime(startTime, endTime, duration, excludeStart, excludeEnd);
-console.log(timeSlots);
+// let timeSlots = GetTime(startTime, endTime, duration, excludeStart, excludeEnd);
+// console.log(timeSlots);
