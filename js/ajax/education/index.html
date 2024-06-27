@@ -54,6 +54,7 @@
 </div>
 <br><hr>
 <button onclick="getDataApi()">Get API</button>
+<button onclick="clearText()">Clear Text</button>
 <div id="container"></div>
 
 
@@ -168,6 +169,10 @@
         }
 
         xml5.send()
+    }
+
+    function clearText() {
+        document.querySelector('#container').innerHTML = ''
     }
 </script>
 </html>
