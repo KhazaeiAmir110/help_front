@@ -14,6 +14,34 @@
 <hr>
 <div id="result"></div>
 
+<div>
+    <div id="true-text">
+        <h1>
+        Loremipsum - 1
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Semper viverra nam libero justo laoreet sit amet. Sapien nec sagittis aliquam malesuada. Nec
+            sagittis aliquam malesuada bibendum arcu vitae. Aliquam eleifend mi </p>
+        <p>in nulla posuere sollicitudin. Aliquet sagittis id consectetur purus ut faucibus. Diam maecenas sed enim ut sem
+            viverra. Turpis in eu mi bibendum neque egestas congue. Consequat ac felis donec et odio pellentesque diam
+            volutpat. Proin fermentum leo vel orci porta non pulvinar neque laoreet. Est ullamcorper eget nulla facilisi
+            etiam dignissim diam quis enim. Ultrices sagittis orci a scelerisque purus semper. Vulputate eu scelerisque
+            felis imperdiet proin fermentum leo vel orci. Semper eget duis at tellus at urna condimentum. Sem integer vitae
+            justo eget magna. Proin nibh nisl condimentum id venenatis a.
+
+            Nullam non nisi est sit amet facilisis. Tempus urna et pharetra pharetra massa massa ultricies. Quis enim
+            lobortis scelerisque fermentum dui faucibus. Sit amet mauris commodo quis. Et ultrices neque ornare aenean
+            euismod elementum nisi quis eleifend. Nisi lacus sed viverra tellus in hac. Amet nisl purus in mollis nunc.
+            Aliquet bibendum enim facilisis gravida. Placerat in egestas erat imperdiet sed euismod nisi porta. Tellus
+            elementum sagittis vitae et leo. Ultrices tincidunt arcu non sodales neque sodales.
+        </p>
+    </div>
+    <div id="false-text"></div>
+    <br><hr>
+    <button onclick="changeText2()">Change Text</button>
+</div>
+
 </body>
 
 <script>
@@ -69,6 +97,23 @@
         }
 
         xml3.send()
+    }
+</script>
+
+<!--Average-->
+<script>
+    function changeText2() {
+        let xml4 = new XMLHttpRequest()
+
+        xml4.open('GET', 'page2.html')
+
+        xml4.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200){
+                document.querySelector('#true-text').style.display = 'none'
+                document.querySelector('#false-text').innerHTML = this.response
+            }
+        }
+        xml4.send()
     }
 </script>
 </html>
