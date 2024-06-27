@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Ajax</title>
+
+    <!--  style  -->
+    <style>
+        .category-box{
+            width: 250px;
+            height: 200px;
+            margin: 15px;
+            float: left;
+            box-shadow: 0 1px 14px 2px #c0c0c0;
+        }
+    </style>
 </head>
 <body>
 <div id="demo"></div>
@@ -41,6 +52,10 @@
     <br><hr>
     <button onclick="changeText2()">Change Text</button>
 </div>
+<br><hr>
+<button onclick="getDataApi()">Get API</button>
+<div id="container"></div>
+
 
 </body>
 
@@ -114,6 +129,46 @@
             }
         }
         xml4.send()
+    }
+</script>
+
+<!--API-->
+<script>
+    function getDataApi() {
+        let xml5 = new XMLHttpRequest()
+
+        xml5.open('GET', 'https://apitester.ir/api/Categories')
+
+        xml5.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200){
+                 generate(JSON.parse(this.response))
+            }
+        }
+
+        function generate(data) {
+            for (let i = 0; i < data.length; i++) {
+                createBox(data[i])
+            }
+            document.querySelector('#container').innerHTML = data
+        }
+
+        function createBox(category) {
+            let box = document.createElement('div')
+            box.className = 'category-box'
+
+            let title = document.createElement('h3')
+            title.innerHTML = category.categoryName
+
+            let description = document.createElement('p')
+            description.innerHTML = category.description
+
+            box.appendChild(title)
+            box.appendChild(description)
+
+            document.querySelector('#container').appendChild(box)
+        }
+
+        xml5.send()
     }
 </script>
 </html>
