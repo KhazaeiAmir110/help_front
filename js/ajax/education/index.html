@@ -9,7 +9,10 @@
 
 <label>
     <input>
+    <button onclick="getXml()">show info</button>
 </label>
+<hr>
+<div id="result"></div>
 
 </body>
 
@@ -51,5 +54,21 @@
     })
 
     xml2.send(JSON.stringify(data))
+</script>
+
+<script>
+    function getXml(){
+        let xml3 = new XMLHttpRequest()
+
+        xml3.open('GET', 'info.html')
+
+        xml3.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200){
+                document.querySelector('#result').innerHTML = this.response
+            }
+        }
+
+        xml3.send()
+    }
 </script>
 </html>
