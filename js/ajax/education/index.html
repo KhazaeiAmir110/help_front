@@ -6,6 +6,11 @@
 </head>
 <body>
 <div id="demo"></div>
+
+<label>
+    <input>
+</label>
+
 </body>
 
 <script>
@@ -24,5 +29,27 @@
     }
 
     xml.send()
+</script>
+
+<script>
+    let xml2 = new XMLHttpRequest()
+
+    let data = {
+        username : 'amir',
+        email : 'amir@gmail.com'
+    }
+
+    xml2.open('POST', 'index.html')
+    xml2.setRequestHeader('input', 'application/json; charset=UTF-8')
+
+    xml2.addEventListener('load', function (){
+        if (this.readyState === 201){
+            console.log('done' , this.responseText)
+        }else {
+            console.log(this.status)
+        }
+    })
+
+    xml2.send(JSON.stringify(data))
 </script>
 </html>
