@@ -56,7 +56,18 @@
 <button onclick="getDataApi()">Get API</button>
 <button onclick="clearText()">Clear Text</button>
 <div id="container"></div>
+<br><hr>
 
+<div id="post">
+    <h3>POST API</h3>
+    <label>
+        name : <input type="text" name="name" id="name">
+    </label>
+    <label>
+        description : <textarea id="des"></textarea>
+    </label>
+    <button onclick="save()">save text</button>
+</div>
 
 </body>
 
@@ -173,6 +184,30 @@
 
     function clearText() {
         document.querySelector('#container').innerHTML = ''
+    }
+</script>
+
+<!--POST API-->
+<script>
+
+    let category = {}
+
+    category.categoryName = document.querySelector('#name').value
+    category.description = document.querySelector('#des').value
+    function save() {
+        let xml6 = new XMLHttpRequest()
+
+        xml6.open('GET', 'https://apitester.ir/api/Categories')
+
+        xml6.onreadystatechange = function (){
+            if (this.readyState === 4 && this.status === 201){
+                alert(this.responseText)
+            }
+        }
+
+        xml6.setRequestHeader('content-type', 'application/json')
+
+        xml6.send(JSON.stringify(category))
     }
 </script>
 </html>
