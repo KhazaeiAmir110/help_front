@@ -69,6 +69,15 @@
     <button onclick="save()">save text</button>
 </div>
 
+<br><hr><br>
+<div id="ajax1">
+    <button type="button" id="button2">Button</button>
+    <label>
+        name : <input id="name2">
+    </label>
+    <p id="text2"></p>
+</div>
+
 </body>
 
 <script>
@@ -211,4 +220,28 @@
         xml6.send(JSON.stringify(category))
     }
 </script>
+
+<!--another method-->
+<script>
+    let button = document.getElementById('button2')
+    let input2 = document.getElementById('name2')
+    let p = document.getElementById('text2')
+
+    button.addEventListener('click', function (){
+        let xml7 = new XMLHttpRequest()
+
+        xml7.open('GET', 'https://jsonplaceholder.typicode.com/todos/1')
+        xml7.addEventListener('readystatechange', function (){
+            if (xml7.readyState === 4){
+                if ((xml7.status >= 200 && xml7.status < 300) || xml7.status === 304){
+                    p.innerHTML = xml7.responseText + input2.value
+                }else {
+                    p.innerHTML = 'AN ERROR'
+                }
+            }
+        })
+        xml7.send()
+    })
+</script>
+
 </html>
