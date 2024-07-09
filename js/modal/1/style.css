@@ -1,0 +1,70 @@
+@import url("https://fonts.google.com/noto/specimen/Noto+Sans+Arabic?subset=arabic");
+:root{
+    --main-color: #d4326b;
+    --background-color: antiquewhite;
+}
+
+body{
+    background-color: var(--background-color);
+    direction: rtl;
+    line-height: 1.8;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.open{
+    border: 0;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.closeBtn{
+    width: 30px;
+    height: 30px;
+}
+
+.base-modal{
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    align-content: center;
+    overflow: auto;
+}
+
+.modal-center{
+    width: 400px;
+    background-color: #fefefe;
+    margin: 100px auto auto;
+    animation: animatetop 0.5s;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.part_1{
+    padding: 2px 15px;
+    background-color: #5ba1da;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.part_2{
+    padding: 15px 20px;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+@keyframes animatetop {
+    from{
+        margin-top: -300px;
+        opacity: 0;
+    }
+    to{
+        margin-top: 100px;
+        opacity: 0;
+    }
+}
