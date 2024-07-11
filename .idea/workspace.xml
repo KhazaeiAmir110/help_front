@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85f5ca93-a144-4933-8240-72637611e00a" name="Changes" comment="work with useState">
-      <change afterPath="$PROJECT_DIR$/simple/first-app/src/roocket/CourseList.jsx" afterDir="false" />
+    <list default="true" id="85f5ca93-a144-4933-8240-72637611e00a" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/simple/start/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,13 +17,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JSX File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="JS" />
+        <entry key="$PROJECT_DIR$" value="baraato" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,12 +37,14 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2gaxs3bzkAdJa86aPA1mwsc1plX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "Node.js.FormComponent.js.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -152,7 +155,8 @@
     <MESSAGE value="fix bug" />
     <MESSAGE value="onDoubleClick" />
     <MESSAGE value="work with useState" />
-    <option name="LAST_COMMIT_MESSAGE" value="work with useState" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
