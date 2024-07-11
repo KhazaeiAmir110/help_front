@@ -16,12 +16,18 @@
         let name = 'Amir'
         let text = 'Hellow evey body ...'
         let address = 'https://www.google.com/'
+
+        const click = () => {
+            document.querySelector('.divi').innerHTML = 'amir'
+        }
         return (
             <div className="divi">
                 <h2>name : {name}</h2>
                 <h3>text : {text}</h3>
 
                 <a href={address}>Address</a>
+
+                <button onClick={click}>Click me</button>
             </div>
         )
     }
