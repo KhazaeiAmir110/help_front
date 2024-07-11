@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85f5ca93-a144-4933-8240-72637611e00a" name="Changes" comment="update first component">
-      <change beforePath="$PROJECT_DIR$/simple/start/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/simple/start/index.html" afterDir="false" />
+    <list default="true" id="85f5ca93-a144-4933-8240-72637611e00a" name="Changes" comment="event">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "react",
+    "last_opened_file_path": "/home/amirhossein/Projects/Front/help_front/simple/second-app/package.json",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,7 +59,17 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.second-app">
+    <configuration name="second-app" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/simple/second-app/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/simple/first-app/package.json" />
       <command value="run" />
@@ -69,6 +80,10 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.second-app" />
+      <item itemvalue="npm.start" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
@@ -136,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720677993712</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="event">
+      <option name="closed" value="true" />
+      <created>1720678374613</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720678374613</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +196,8 @@
     <MESSAGE value="." />
     <MESSAGE value="create first component" />
     <MESSAGE value="update first component" />
-    <option name="LAST_COMMIT_MESSAGE" value="update first component" />
+    <MESSAGE value="event" />
+    <option name="LAST_COMMIT_MESSAGE" value="event" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
