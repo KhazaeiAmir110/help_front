@@ -8,13 +8,20 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
+<h1>start work with react</h1>
 
 <div id="banner"></div>
 <script type="text/babel">
     const Banner = () =>{
+        let name = 'Amir'
+        let text = 'Hellow evey body ...'
+        let address = 'https://www.google.com/'
         return (
-            <div>
-                <p>banner</p>
+            <div className="divi">
+                <h2>name : {name}</h2>
+                <h3>text : {text}</h3>
+
+                <a href={address}>Address</a>
             </div>
         )
     }
