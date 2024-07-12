@@ -18,6 +18,13 @@ function App() {
         setName('amir')
     }
 
+  //   delete
+    const eventDelete = (id) => {
+        setEvents(events.filter((event) => {
+            return id !== event.id
+        }))
+    }
+
   return (
     <div className="App">
         <h1>{name}</h1>
@@ -29,6 +36,7 @@ function App() {
         events.map((event, index) => (
             <div style={{display:"flex", justifyContent:"center", alignItems:"center"}} key={event.id}>
                 <h3 style={{color:'blue'}}>{index}_ </h3> <h3>{event.title}</h3>
+                <button onClick={() => eventDelete(event.id)}>Delete</button>
             </div>
         ))
         }
