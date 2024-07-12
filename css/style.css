@@ -174,12 +174,26 @@
 
 /*MODAL*/
 .base_modal{
-    width: auto;
-    height: 60vh;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
 }
 .modal{
-    background-color: #bec3c7;
-    border-radius: 7px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px 10px;
+    width: 500px;
 }
 .part_1_modal{
     display: flex;
@@ -219,7 +233,10 @@
     font-size: 14px;
 
 }
-
+.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 /* ----------------------------------------------------------- */
 
 /* Page 4 */
