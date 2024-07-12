@@ -122,7 +122,7 @@
                     <div class="divar"></div>
                     <div class="parent-btn-page-3">
                         <button class="button-green"><a href="page2.html">بازگشت</a></button>
-                        <button class="button-green"><a href="page4.html">بعدی</a></button>
+                        <button class="button-green open-modal">بعدی</button>
                     </div>
                 </div>
             </div>
@@ -143,7 +143,7 @@
                     </div>
                     <hr>
                     <div class="footer_modal">
-                        <button class="button-green btn-modal">تایید کنید</button>
+                        <button class="button-green btn-modal"><a href="page4.html">تایید کنید</a></button>
                     </div>
                 </div>
             </div>
@@ -159,5 +159,20 @@
             </a>
         </div>
     </div>
+
+<script>
+    const openBtn = document.querySelector('.open-modal');
+    const modalContainer = document.querySelector('.base_modal')
+    const closeBtn = document.querySelector('.close-modal');
+
+
+    openBtn.addEventListener("click",function(){
+        modalContainer.classList.add("show")
+    })
+
+    closeBtn.addEventListener('click',function(){
+        modalContainer.classList.remove("show");
+    })
+</script>
 </body>
 </html>
