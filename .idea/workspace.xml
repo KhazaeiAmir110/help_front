@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="85f5ca93-a144-4933-8240-72637611e00a" name="Changes" comment="start react">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple/second-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/simple/second-app/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple/second-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/simple/second-app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple/second-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/simple/second-app/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720682309762</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="start react">
+      <option name="closed" value="true" />
+      <created>1720688040955</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1720688040955</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
