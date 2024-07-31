@@ -1,9 +1,10 @@
 import './App.css';
+import First from "./components/first/first";
 
-function App() {
+export default function App() {
     return (
-        <div></div>
+        <div>
+            <First/>
+        </div>
     );
 }
-
-export default App;
