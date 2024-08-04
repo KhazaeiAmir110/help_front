@@ -13,7 +13,7 @@ export default function App() {
 
             <br/><hr/>
 
-            <Modal>
+            <Modal isSalesModal={true}>
                 <h2>10% off Coupon Code</h2>
                 <p>Use the Code OPEN-CODE</p>
             </Modal>
