@@ -1,9 +1,11 @@
 import Header from "./components/header/Header.jsx";
+import SearchBox from "./components/header/SearchBox.jsx";
 
 function App() {
     return (
         <>
-            <Header></Header>
+            <Header/>
+            <SearchBox/>
         </>
     )
 }
