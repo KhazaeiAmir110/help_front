@@ -8,6 +8,7 @@ const Header = (props) => (
         <header>
             <Navigation />
             <SearchBox />
+            <FollowUs />
         </header>
     </>
 );
