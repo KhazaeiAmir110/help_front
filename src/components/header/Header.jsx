@@ -4,15 +4,18 @@ import SearchBox from "./SearchBox.jsx";
 import FollowUs from "./FollowUs.jsx";
 import Slider from "./Slider.jsx";
 
+import image_slide from "/images/header/cinema.jpg"
+
 const Header = (props) => (
-    <>
-        <header className={"container"}>
+    <div className={"w-full"}>
+        <header className={"container bg-cover pt-1 pb-12 items-center justify-center"}
+                style={{backgroundImage: `linear-gradient(to bottom, #00000085, #000000db),url(${image_slide})`}}>
             <Navigation />
             <SearchBox />
             <FollowUs />
             <Slider />
         </header>
-    </>
+    </div>
 );
 
 export default Header;
