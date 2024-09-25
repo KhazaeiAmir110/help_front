@@ -4,7 +4,26 @@ import {Autoplay} from "swiper/modules";
 function Slider(props) {
     return (
         <div className={"mt-8"}>
-            <Swiper modules={[Autoplay]} spaceBetween={20} slidesPerView={4} autoplay={true} loop={true}>
+            <Swiper
+                modules={[Autoplay]}
+                autoplay={true} loop={true}
+                breakpoints={{
+                    // when window width is >= 320px
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    // when window width is >= 480px
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    // when window width is >= 640px
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 40
+                    }
+                }}>
                 {[1, 2, 3, 4, 1, 2, 3, 4].map(
                         number => (
                             <SwiperSlide key={number}>
