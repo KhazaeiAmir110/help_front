@@ -5,7 +5,7 @@ import FollowUs from "./FollowUs.jsx";
 
 const Header = (props) => (
     <>
-        <header>
+        <header className={"container"}>
             <Navigation />
             <SearchBox />
             <FollowUs />

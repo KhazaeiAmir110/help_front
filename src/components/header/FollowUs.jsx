@@ -2,7 +2,7 @@ import React from 'react';
 
 function FollowUs(props) {
     return (
-        <section className={'container flex justify-end mt-6 text-slate-300'}>
+        <section className={'flex justify-end mt-6 text-slate-300'}>
             <div className={'flex items-center'}>
                 <span className={'font-medium'}>FOLLOW US:</span>
                 <ul className={'flex gap-4 ml-4'}>

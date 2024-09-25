@@ -2,7 +2,7 @@ import React from 'react';
 
 function Navigation(props) {
     return (
-        <nav className={'container flex mt-10 items-center justify-center text-slate-300'}>
+        <nav className={'flex mt-10 items-center justify-center text-slate-300'}>
             <div className={'flex items-center'}>
                 <h1 className={'text-2xl mr-12 hover:text-red-200'}>
                     Hyper<br /><span className={'text-5xl text-rose-600 hover:text-rose-900'}>Movies</span>
