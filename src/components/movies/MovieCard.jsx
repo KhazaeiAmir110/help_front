@@ -6,7 +6,7 @@ function MovieCard(props) {
             <img className={"object-fill w-full h-full"}
                  src={props.img} alt={props.title}/>
             <div
-                className={"flex flex-col p-6 justify-end absolute bottom-0 left-0 w-full h-fit bg-gradient-to-b from-[#00000003] to-[#000000cc]"}>
+                className={"flex flex-col p-6 justify-end absolute bottom-0 left-0 w-full h-fit bg-gradient-to-b from-[#00000003] to-[#000000cc] hover:to-[#000]"}>
                 <h3 className={"uppercase"}>{props.title}</h3>
                 <div className={"flex gap-0.5 items-center"}>
                     <span className={"text-yellow-400"}>
