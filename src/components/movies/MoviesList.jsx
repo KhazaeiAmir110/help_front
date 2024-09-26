@@ -1,4 +1,3 @@
-import React from 'react';
 import MovieListSlider from "./MoviesListSlider.jsx";
 
 const moviesList = [
@@ -64,7 +63,30 @@ const moviesList = [
 function MoviesList() {
     return (
         <div className={"container"}>
-            <div className={"mt-12"}>
+            <div className={"mt-12 mb-12"}>
+                <div className={"md:flex gap-16 mb-8 items-center"}>
+                    <h2 className={"text-slate-100 hover:text-yellow-500 text-4xl"}>Trending</h2>
+
+                    <ul className={"flex gap-4 uppercase text-xl"}>
+                        <li className={"hover:text-[#dcf836]"}>Today</li>
+                        <li className={"hover:text-[#dcf836]"}>This Week</li>
+                        <li className={"hover:text-[#dcf836]"}>This Month</li>
+                        <li className={"hover:text-[#dcf836]"}>This Year</li>
+                    </ul>
+                </div>
+                <MovieListSlider moveis={moviesList}/>
+            </div>
+
+            <div className={"mt-12 mb-12"}>
+                <div className={"md:flex gap-16 mb-8 items-center"}>
+                    <h2 className={"text-slate-100 hover:text-yellow-500 text-4xl"}>On TV</h2>
+
+                    <ul className={"flex gap-4 uppercase text-xl"}>
+                        <li className={"hover:text-[#dcf836]"}>Popular</li>
+                        <li className={"hover:text-[#dcf836]"}>Coming soon</li>
+                        <li className={"hover:text-[#dcf836]"}>Top rated</li>
+                    </ul>
+                </div>
                 <MovieListSlider moveis={moviesList}/>
             </div>
         </div>
