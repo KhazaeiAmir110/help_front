@@ -20,7 +20,7 @@ function Slider() {
                     },
                     // when window width is >= 640px
                     1024: {
-                        slidesPerView: 4,
+                        slidesPerView: 5,
                         spaceBetween: 40
                     }
                 }}>
