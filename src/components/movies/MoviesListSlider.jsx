@@ -1,42 +1,40 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay} from "swiper/modules";
+import MovieCard from "./MovieCard.jsx";
 
-function MovieListSlider() {
+function MovieListSlider(props) {
     return (
-        <div className={"mt-8"}>
-            <Swiper
+        <Swiper
                 modules={[Autoplay]}
                 autoplay={true} loop={true}
                 breakpoints={{
                     // when window width is >= 320px
                     640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20
+                        slidesPerView: 3,
+                        spaceBetween: 10
                     },
                     // when window width is >= 480px
                     768: {
-                        slidesPerView: 3,
-                        spaceBetween: 30
+                        slidesPerView: 4,
+                        spaceBetween: 20
                     },
                     // when window width is >= 640px
                     1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 40
+                        slidesPerView: 6,
+                        spaceBetween: 30
                     }
                 }}>
-                {[1, 2, 3, 4, 1, 2, 3, 4].map(
-                        number => (
-                            <SwiperSlide key={number}>
-                                <img
-                                    className={""}
-                                    src={`http://busterhtml.mbkip3ms9u-e92498n216kr.p.temp-site.link/images/uploads/slider${number}.jpg`}
-                                    alt=""/>
+                {props.moveis.map(
+                        index => (
+                            <SwiperSlide key={index}>
+                                <MovieCard img={index.url} title={index.title} star={index.star}/>
                             </SwiperSlide>
+
                         )
                     )
                 }
+
             </Swiper>
-        </div>
     );
 }
 
