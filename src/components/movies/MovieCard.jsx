@@ -3,7 +3,7 @@ import React from 'react';
 function MovieCard(props) {
     return (
         <div className={"bg-gray-500 aspect-[2/3] relative rounded overflow-hidden"}>
-            <img className={"object-fill"}
+            <img className={"object-fill w-full h-full"}
                  src={props.img} alt={props.title}/>
             <div
                 className={"flex flex-col p-6 justify-end absolute bottom-0 left-0 w-full h-fit bg-gradient-to-b from-[#00000003] to-[#000000cc]"}>
