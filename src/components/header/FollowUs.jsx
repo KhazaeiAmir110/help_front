@@ -1,6 +1,6 @@
 import React from 'react';
 
-function FollowUs(props) {
+function FollowUs() {
     return (
         <section className={'w-5/6 md:flex md:justify-end md:w-full mt-6 text-slate-300'}>
             <div className={'flex items-center'}>

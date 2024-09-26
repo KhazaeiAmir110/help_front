@@ -1,7 +1,7 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay} from "swiper/modules";
 
-function Slider(props) {
+function Slider() {
     return (
         <div className={"mt-8"}>
             <Swiper
