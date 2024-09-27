@@ -1,11 +1,11 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import {createRoot} from 'react-dom/client';
+import {RouterProvider} from "react-router-dom";
+
 import 'swiper/css';
-import './index.css'
+import './index.css';
+import {routers} from './router';
+
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+    <RouterProvider router={routers}/>
 )
