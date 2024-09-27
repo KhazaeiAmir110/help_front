@@ -1,10 +1,10 @@
-import MovieListSlider from "./MoviesListSlider.jsx";
+import MovieListSlider from "../movies/MoviesListSlider.jsx";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {CONFIG} from "../../config.js";
 
 
-function MoviesList() {
+function Home() {
 
     const [movies, setMovies] = useState({trending: [], onTv: []});
 
@@ -59,4 +59,4 @@ function MoviesList() {
     );
 }
 
-export default MoviesList;
+export default Home;
