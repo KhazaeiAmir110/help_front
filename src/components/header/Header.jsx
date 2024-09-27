@@ -12,7 +12,11 @@ function Header() {
     const location = useLocation();
     return (
         <div className={"w-full"}>
-            <header className={"container bg-cover py-0.5 md:pt-1 md:pb-12 items-center justify-center"}
+            <header
+                className={`
+                    container bg-cover py-0.5 md:pt-1 md:pb-12 items-center justify-center 
+                    ${location.pathname !== '/' ? 'h-60' : ''}
+                `}
                     style={{backgroundImage: `linear-gradient(to bottom, #00000085, #000000db),url(${image_slide})`}}>
                 <Navigation/>
                 {
