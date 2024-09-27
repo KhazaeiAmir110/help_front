@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link, NavLink} from "react-router-dom";
 
 function Navigation() {
     const [isOpenMenu, setIsOpenMenu] = React.useState(false);
@@ -7,16 +8,16 @@ function Navigation() {
         <>
             <nav className={'flex mt-10 mb-10 items-center justify-center text-slate-300'}>
                 <div className={'flex items-center'}>
-                    <a href={"/"}>
+                    <Link to={"/"}>
                         <h1 className={'text-2xl mr-12 hover:text-red-200'}>
                             Hyper<br/><span className={'text-5xl text-rose-600 hover:text-rose-900'}>Movies</span>
                         </h1>
-                    </a>
+                    </Link>
                     <ul className={'hidden md:flex text-sm lg:text-base gap-4 text uppercase'}>
-                        <li><a href={'#'} className={"hover:text-white"}>Movies</a></li>
-                        <li><a href={'#'} className={"hover:text-white"}>TV shows</a></li>
-                        <li><a href={'#'} className={"hover:text-white"}>People</a></li>
-                        <li><a href={'#'} className={"hover:text-white"}>More</a></li>
+                        <li><NavLink to={"/movies"} className={"hover:text-white"}>Movies</NavLink></li>
+                        <li><NavLink to={"/tv"} className={"hover:text-white"}>TV shows</NavLink></li>
+                        <li><NavLink to={"/people"} className={"hover:text-white"}>People</NavLink></li>
+                        <li><NavLink to={"/"} className={"hover:text-white"}>More</NavLink></li>
                     </ul>
                 </div>
                 <div className={'hidden md:block ml-auto text-sm lg:text-base uppercase'}>
