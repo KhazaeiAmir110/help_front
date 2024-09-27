@@ -65,7 +65,7 @@ function MoviesList() {
         <div className={"container"}>
             <div className={"mt-12 mb-12"}>
                 <div className={"md:flex gap-16 mb-8 items-center"}>
-                    <h2 className={"text-slate-100 hover:text-yellow-500 text-4xl"}>Trending</h2>
+                    <a href={"#"}><h2 className={"text-slate-100 hover:text-yellow-500 text-4xl"}>Trending</h2></a>
 
                     <ul className={"flex gap-4 uppercase text-xl"}>
                         <li className={"hover:text-[#dcf836]"}>Today</li>
@@ -79,7 +79,7 @@ function MoviesList() {
 
             <div className={"mt-12 mb-12"}>
                 <div className={"md:flex gap-16 mb-8 items-center"}>
-                    <h2 className={"text-slate-100 hover:text-yellow-500 text-4xl"}>On TV</h2>
+                    <a href={"#"}><h2 className={"text-slate-100 hover:text-yellow-500 text-4xl"}>On TV</h2></a>
 
                     <ul className={"flex gap-4 uppercase text-xl"}>
                         <li className={"hover:text-[#dcf836]"}>Popular</li>
