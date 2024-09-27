@@ -22,7 +22,7 @@ export const routers = createBrowserRouter(
                 },
                 {
                     path: "/movies/:id",
-                    element: <MovieTV />
+                    element: <MovieTV type={"movie"}/>
                 },
                 {
                     path: "/tv",
@@ -30,7 +30,7 @@ export const routers = createBrowserRouter(
                 },
                 {
                     path: "/tv/:id",
-                    element: <MovieTV />
+                    element: <MovieTV type="tv" />
                 },
                 {
                     path: "people",
