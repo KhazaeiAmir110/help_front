@@ -9,7 +9,7 @@ function Slider() {
     const [movies, setMovies] = useState([]);
 
     async function loadMovies() {
-        const {data} = await axios.get(`${CONFIG.baseURL}/movie/popular?api_key=${CONFIG.apiKey}`);
+        const {data} = await axios.get(`${CONFIG.baseURL}/movie/upcoming?api_key=${CONFIG.apiKey}`);
 
         setMovies(data.results);
     }
