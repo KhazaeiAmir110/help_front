@@ -1,8 +1,19 @@
 import React from 'react';
 import {Link, NavLink} from "react-router-dom";
 
+const menuItems = [
+    {path: '/movies', title: 'Movies'},
+    {path: '/tv', title: 'TV shows'},
+    {path: '/people', title: 'People'},
+    {path: '/more', title: 'More'},
+]
+
 function Navigation() {
     const [isOpenMenu, setIsOpenMenu] = React.useState(false);
+
+    function activeClass({isActive}) {
+        return isActive ? "text-[#dcf836]" : "hover:text-white";
+    }
 
     return (
         <>
@@ -14,10 +25,14 @@ function Navigation() {
                         </h1>
                     </Link>
                     <ul className={'hidden md:flex text-sm lg:text-base gap-4 text uppercase'}>
-                        <li><NavLink to={"/movies"} className={"hover:text-white"}>Movies</NavLink></li>
-                        <li><NavLink to={"/tv"} className={"hover:text-white"}>TV shows</NavLink></li>
-                        <li><NavLink to={"/people"} className={"hover:text-white"}>People</NavLink></li>
-                        <li><NavLink to={"/"} className={"hover:text-white"}>More</NavLink></li>
+                        {
+                            menuItems.map((menuItem) => (
+                                <li key={menuItem.path}>
+                                    <NavLink to={menuItem.path}
+                                             className={activeClass}>{menuItem.title}</NavLink>
+                                </li>
+                            ))
+                        }
                     </ul>
                 </div>
                 <div className={'hidden md:block ml-auto text-sm lg:text-base uppercase'}>
@@ -44,10 +59,19 @@ function Navigation() {
                 }
             >
                 <ul className={'flex flex-col gap-4'}>
-                    <li><a href={'#'}>Movies</a></li>
-                    <li><a href={'#'}>TV shows</a></li>
-                    <li><a href={'#'}>People</a></li>
-                    <li><a href={'#'}>More</a></li>
+                    {
+                        menuItems.map((menuItem) => (
+                            <li key={menuItem.path}>
+                                <NavLink
+                                    to={menuItem.path}
+                                    className={activeClass}
+                                    onClick={() => {setIsOpenMenu(false)}}
+                                >
+                                    {menuItem.title}
+                                </NavLink>
+                            </li>
+                        ))
+                    }
                 </ul>
                 <div className={'mt-8 flex gap-4 justify-center items-center'}>
                     <a className={'text-xl'} href={'#'}>Login</a>
