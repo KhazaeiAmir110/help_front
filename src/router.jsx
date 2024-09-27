@@ -1,6 +1,10 @@
 import {createBrowserRouter} from "react-router-dom";
+
 import App from "./App.jsx";
 import Home from "./components/pages/Home.jsx";
+import MovieTV from "./components/pages/single/MovieTV.jsx";
+import Person from "./components/pages/single/Person.jsx";
+import People from "./components/pages/People.jsx";
 
 
 export const routers = createBrowserRouter(
@@ -14,27 +18,27 @@ export const routers = createBrowserRouter(
                 },
                 {
                     path: "/movies",
-                    element: "Movies Page"
+                    element: <MovieTV />
                 },
                 {
                     path: "/movies/:id",
-                    element: "Movie ID"
+                    element: <MovieTV />
                 },
                 {
                     path: "/tv",
-                    element: "TV Page"
+                    element: <MovieTV />
                 },
                 {
                     path: "/tv/:id",
-                    element: "TV ID"
+                    element: <MovieTV />
                 },
                 {
                     path: "people",
-                    element: "People"
+                    element: <People />
                 },
                 {
                     path: "people/:id",
-                    element: "People ID"
+                    element: <Person />
                 }
             ]
         }
