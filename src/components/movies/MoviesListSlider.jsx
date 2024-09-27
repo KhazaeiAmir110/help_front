@@ -1,6 +1,7 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay} from "swiper/modules";
 import MovieCard from "./MovieCard.jsx";
+import {posterImage} from "../../config.js";
 
 function MovieListSlider(props) {
     return (
@@ -25,9 +26,9 @@ function MovieListSlider(props) {
                     }
                 }}>
                 {props.moveis.map(
-                        index => (
-                            <SwiperSlide key={index}>
-                                <MovieCard img={index.url} title={index.title} star={index.star}/>
+                        movie => (
+                            <SwiperSlide key={movie.id}>
+                                <MovieCard img={posterImage(movie.poster_path)} title={movie.title} star={movie.vote_average}/>
                             </SwiperSlide>
 
                         )
