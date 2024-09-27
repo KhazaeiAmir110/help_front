@@ -5,7 +5,7 @@ import {posterImage} from "../../config.js";
 
 function MovieCard(props) {
     return (
-        <Link to={`/movies/${props.movie.id}`}>
+        <Link to={`/${props.type}/${props.movie.id}`}>
             <div className={"bg-gray-500 aspect-[2/3] relative rounded overflow-hidden"}>
                 <img className={"object-fill w-full h-full"}
                      src={posterImage(props.movie.poster_path)} alt={props.movie.title}/>

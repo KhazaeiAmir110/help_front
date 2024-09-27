@@ -29,7 +29,7 @@ function MovieListSlider(props) {
                 {props.moveis.map(
                         movie => (
                             <SwiperSlide key={movie.id}>
-                                <MovieCard movie={movie}/>
+                                <MovieCard movie={movie} type={props.type}/>
                             </SwiperSlide>
 
                         )

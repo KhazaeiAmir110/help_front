@@ -40,7 +40,7 @@ function Home() {
                         <li className={"hover:text-[#dcf836]"}>This Year</li>
                     </ul>
                 </div>
-                <MovieListSlider moveis={movies.trending}/>
+                <MovieListSlider moveis={movies.trending} type="movies"/>
             </div>
 
             <div className={"mt-12 mb-12"}>
@@ -53,7 +53,7 @@ function Home() {
                         <li className={"hover:text-[#dcf836]"}>Top rated</li>
                     </ul>
                 </div>
-                <MovieListSlider moveis={movies.onTv}/>
+                <MovieListSlider moveis={movies.onTv} type="tv"/>
             </div>
         </div>
     );
