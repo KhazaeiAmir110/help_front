@@ -1,7 +1,23 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay} from "swiper/modules";
+import {useEffect, useState} from "react";
+import axios from "axios";
+
+import {CONFIG, posterImage} from "../../config.js"
 
 function Slider() {
+    const [movies, setMovies] = useState([]);
+
+    async function loadMovies() {
+        const {data} = await axios.get(`${CONFIG.baseURL}/movie/popular?api_key=${CONFIG.apiKey}`);
+
+        setMovies(data.results);
+    }
+
+    useEffect(() => {
+        loadMovies();
+    }, [])
+
     return (
         <div className={"mt-8"}>
             <Swiper
@@ -24,13 +40,12 @@ function Slider() {
                         spaceBetween: 40
                     }
                 }}>
-                {[1, 2, 3, 4, 1, 2, 3, 4].map(
-                        number => (
-                            <SwiperSlide key={number}>
+                {movies.map(
+                        movie => (
+                            <SwiperSlide key={movie.id}>
                                 <img
-                                    className={""}
-                                    src={`http://busterhtml.mbkip3ms9u-e92498n216kr.p.temp-site.link/images/uploads/slider${number}.jpg`}
-                                    alt=""/>
+                                    src={posterImage(movie.poster_path)}
+                                    alt={movie.title}/>
                             </SwiperSlide>
                         )
                     )
