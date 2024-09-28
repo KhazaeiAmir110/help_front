@@ -53,9 +53,9 @@ function Navigation() {
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/signup"
+                                    <NavLink to="/register"
                                              className={'bg-rose-800 hover:bg-rose-700 px-6 py-3 rounded-2xl'}>
-                                        Sign up
+                                        Register
                                     </NavLink>
                                 </li>
                             </ul>
@@ -104,9 +104,9 @@ function Navigation() {
                                 <NavLink to="/login" className={'text-xl'}>
                                     Login
                                 </NavLink>
-                                <NavLink to="/signup"
+                                <NavLink to="/register"
                                          className={'bg-rose-800 hover:bg-rose-700 px-6 py-3 rounded-2xl'}>
-                                    Sign up
+                                    Register
                                 </NavLink>
                             </>
                         )

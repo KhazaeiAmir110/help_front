@@ -5,8 +5,8 @@ import Home from "./components/pages/Home.jsx";
 import MovieTV from "./components/pages/single/MovieTV.jsx";
 import Person from "./components/pages/single/Person.jsx";
 import People from "./components/pages/People.jsx";
-import Login from "./components/pages/Login.jsx";
-import SignUp from "./components/pages/SignUp.jsx";
+import Login from "./components/authentication/login/Login.jsx";
+import Register from "./components/authentication/register/Register.jsx";
 
 
 export const routers = createBrowserRouter(
@@ -47,8 +47,8 @@ export const routers = createBrowserRouter(
                     element: <Login />
                 },
                 {
-                    path: "/signup",
-                    element: <SignUp />
+                    path: "/register",
+                    element: <Register />
                 },
             ]
         }
