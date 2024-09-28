@@ -5,6 +5,8 @@ import Home from "./components/pages/Home.jsx";
 import MovieTV from "./components/pages/single/MovieTV.jsx";
 import Person from "./components/pages/single/Person.jsx";
 import People from "./components/pages/People.jsx";
+import Login from "./components/pages/Login.jsx";
+import SignUp from "./components/pages/SignUp.jsx";
 
 
 export const routers = createBrowserRouter(
@@ -42,11 +44,11 @@ export const routers = createBrowserRouter(
                 },
                 {
                     path: "/login",
-                    element: "Login"
+                    element: <Login />
                 },
                 {
                     path: "/signup",
-                    element: "Sign Up"
+                    element: <SignUp />
                 },
             ]
         }
