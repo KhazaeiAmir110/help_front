@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Link, NavLink} from "react-router-dom";
+import {UserContext} from "../../context/UserContext.jsx";
 
 const menuItems = [
     {path: '/movies', title: 'Movies'},
@@ -10,6 +11,9 @@ const menuItems = [
 
 function Navigation() {
     const [isOpenMenu, setIsOpenMenu] = React.useState(false);
+
+    const {user} = useContext(UserContext);
+    console.log(user);
 
     function activeClass({isActive}) {
         return isActive ? "text-[#dcf836]" : "hover:text-white";
@@ -36,11 +40,27 @@ function Navigation() {
                     </ul>
                 </div>
                 <div className={'hidden md:block ml-auto text-sm lg:text-base uppercase'}>
-                    <ul className={'flex gap-4'}>
-                        <li><a href={'#'} className={"hover:text-white"}>Login</a></li>
-                        <li><a className={'bg-rose-800 hover:bg-rose-700 px-6 py-3 rounded-2xl'} href={'#'}>Sign up</a>
-                        </li>
-                    </ul>
+                    {
+                        user ? (
+                            <NavLink to={"/"} className={'text-black bg-amber-200 hover:bg-amber-400 px-8 py-3 rounded-2xl'}>
+                                {user.name}
+                            </NavLink>
+                        ) : (
+                            <ul className={'flex gap-4'}>
+                                <li>
+                                    <NavLink to={"/login"} className={"hover:text-white"}>
+                                        Login
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to={"/signup"}
+                                             className={'bg-rose-800 hover:bg-rose-700 px-6 py-3 rounded-2xl'}>
+                                        Sign up
+                                    </NavLink>
+                                </li>
+                            </ul>
+                        )
+                    }
                 </div>
                 <div className={"md:hidden ml-auto"}>
                     <button onClick={() => setIsOpenMenu(!isOpenMenu)}>
@@ -74,8 +94,23 @@ function Navigation() {
                     }
                 </ul>
                 <div className={'mt-8 flex gap-4 justify-center items-center'}>
-                    <a className={'text-xl'} href={'#'}>Login</a>
-                    <a className={'bg-rose-800 hover:bg-rose-700 px-6 py-3 rounded-2xl'} href={'#'}>Sign up</a>
+                    {
+                        user ? (
+                            <NavLink to={"/"} className={'bg-rose-800 hover:bg-rose-700 px-6 py-3 rounded-2xl'}>
+                                {user.name}
+                            </NavLink>
+                        ) : (
+                            <>
+                                <NavLink to={"/login"} className={'text-xl'}>
+                                    Login
+                                </NavLink>
+                                <NavLink to={"/signup"}
+                                         className={'bg-rose-800 hover:bg-rose-700 px-6 py-3 rounded-2xl'}>
+                                    Sign up
+                                </NavLink>
+                            </>
+                        )
+                    }
                 </div>
             </div>
         </>

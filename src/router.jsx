@@ -39,7 +39,15 @@ export const routers = createBrowserRouter(
                 {
                     path: "people/:id",
                     element: <Person />
-                }
+                },
+                {
+                    path: "/login",
+                    element: "Login"
+                },
+                {
+                    path: "/signup",
+                    element: "Sign Up"
+                },
             ]
         }
     ]
