@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {CONFIG} from "../../../config.js";
+import {CONFIG, posterImage} from "../../../config.js";
 
 function MovieTV(props) {
 
@@ -11,7 +11,7 @@ function MovieTV(props) {
 
     async function fetchMovieTV() {
         const {data} = await axios.get(
-            `https://api.themoviedb.org/3/${props.type}/${id}?api_key=${CONFIG.apiKey}`
+            `${CONFIG.baseURL}/${props.type}/${id}?api_key=${CONFIG.apiKey}`
         );
 
         setMovieTv(data)
@@ -23,7 +23,14 @@ function MovieTV(props) {
 
     return (
         <div>
-            <h1>{movieTv.title}</h1>
+            <h1>{
+                props.type === "movie" ? (
+                    movieTv.title
+                ) : (
+                    movieTv.name
+                )
+            }</h1>
+            <img src={posterImage(movieTv.poster_path)} />
         </div>
     );
 }
