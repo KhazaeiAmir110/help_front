@@ -8,10 +8,18 @@ function MovieCard(props) {
         <Link to={`/${props.type}/${props.movie.id}`}>
             <div className={"bg-gray-500 aspect-[2/3] relative rounded overflow-hidden"}>
                 <img className={"object-fill w-full h-full"}
-                     src={posterImage(props.movie.poster_path)} alt={props.movie.title}/>
+                     src={posterImage(props.type === "person" ? (props.movie.profile_path) : (props.movie.poster_path))} alt={props.movie.title}/>
                 <div
                     className={"flex flex-col p-6 justify-end absolute bottom-0 left-0 w-full h-fit bg-gradient-to-b from-[#00000003] to-[#000000cc] hover:to-[#000]"}>
-                    <h3 className={"uppercase"}>{props.movie.title}</h3>
+                    <h3 className={"uppercase"}>
+                        {
+                            props.type === "person" ? (
+                                props.movie.name
+                            ) : (
+                                props.movie.title
+                            )
+                        }
+                    </h3>
                     <div className={"flex gap-0.5 items-center"}>
                     <span className={"text-yellow-400"}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
