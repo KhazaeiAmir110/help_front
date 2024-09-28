@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import {useState, useContext} from 'react';
 import {Link, NavLink} from "react-router-dom";
 import {UserContext} from "../../context/UserContext.jsx";
 
@@ -10,7 +10,7 @@ const menuItems = [
 ]
 
 function Navigation() {
-    const [isOpenMenu, setIsOpenMenu] = React.useState(false);
+    const [isOpenMenu, setIsOpenMenu] = useState(false);
 
     const {user} = useContext(UserContext);
     console.log(user);
@@ -48,12 +48,12 @@ function Navigation() {
                         ) : (
                             <ul className={'flex gap-4'}>
                                 <li>
-                                    <NavLink to={"/login"} className={"hover:text-white"}>
+                                    <NavLink to="/login" className={"hover:text-white"}>
                                         Login
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to={"/signup"}
+                                    <NavLink to="/signup"
                                              className={'bg-rose-800 hover:bg-rose-700 px-6 py-3 rounded-2xl'}>
                                         Sign up
                                     </NavLink>
@@ -101,10 +101,10 @@ function Navigation() {
                             </NavLink>
                         ) : (
                             <>
-                                <NavLink to={"/login"} className={'text-xl'}>
+                                <NavLink to="/login" className={'text-xl'}>
                                     Login
                                 </NavLink>
-                                <NavLink to={"/signup"}
+                                <NavLink to="/signup"
                                          className={'bg-rose-800 hover:bg-rose-700 px-6 py-3 rounded-2xl'}>
                                     Sign up
                                 </NavLink>
