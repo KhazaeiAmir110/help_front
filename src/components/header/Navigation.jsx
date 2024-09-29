@@ -1,7 +1,6 @@
 import {useState, useContext} from 'react';
 import {Link, NavLink} from "react-router-dom";
 import {UserContext} from "../../context/UserContext.jsx";
-import toast from "react-hot-toast";
 
 const menuItems = [
     {path: '/movies', title: 'Movies'},
@@ -13,16 +12,10 @@ const menuItems = [
 function Navigation() {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
 
-    const {user} = useContext(UserContext);
+    const {user, logout} = useContext(UserContext);
 
     function activeClass({isActive}) {
         return isActive ? "text-[#dcf836]" : "hover:text-white";
-    }
-
-    // logout
-    function logout() {
-        localStorage.removeItem("session");
-        toast.success(`Logout ${user.username}`);
     }
 
     return (

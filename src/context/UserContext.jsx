@@ -69,8 +69,17 @@ function UserProvider({children}) {
     }
 
 
+    // logout
+    function logout() {
+        setUser(null);
+        setSession(null);
+        localStorage.clear()
+        toast.success(`Logout ${user.username}`);
+    }
+
+
     return (
-        <UserContext.Provider value={{user, login, session}}>
+        <UserContext.Provider value={{user, login, session, logout}}>
             {children}
         </UserContext.Provider>
     )
