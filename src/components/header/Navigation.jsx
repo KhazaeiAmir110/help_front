@@ -42,7 +42,13 @@ function Navigation() {
                     {
                         user ? (
                             <NavLink to={"/"} className={'text-black bg-amber-200 hover:bg-amber-400 px-8 py-3 rounded-2xl'}>
-                                {user.name}
+                                {
+                                    user.name ? (
+                                        user.name
+                                    ) : (
+                                        user.username
+                                    )
+                                }
                             </NavLink>
                         ) : (
                             <ul className={'flex gap-4'}>
@@ -96,7 +102,13 @@ function Navigation() {
                     {
                         user ? (
                             <NavLink to={"/"} className={'bg-rose-800 hover:bg-rose-700 px-6 py-3 rounded-2xl'}>
-                                {user.name}
+                                {
+                                    user.name ? (
+                                        user.name
+                                    ) : (
+                                        user.username
+                                    )
+                                }
                             </NavLink>
                         ) : (
                             <>
