@@ -1,13 +1,51 @@
 import {createContext, useState} from "react";
+import axios from "axios";
 
-export const UserContext = createContext(undefined);
+import {CONFIG} from "../config.js";
+
+export const UserContext = createContext({});
 
 
 function UserProvider({children}) {
     const [user, setUser] = useState(null);
+    const [session, setSession] = useState(initSession);
+
+    function initSession() {
+        return localStorage.getItem("session") ? localStorage.getItem("session") : null;
+    }
+
+
+    async function login(username, password) {
+        try {
+            // The first stage
+            const tokenResult = await axios.get(
+                `${CONFIG.baseURL}/authentication/token/new?api_key=${CONFIG.apiKey}`
+            )
+
+            // The second stage
+            const authorize = await axios.post(
+                `${CONFIG.baseURL}/authentication/token/validate_with_login?api_key=${CONFIG.apiKey}`,
+                {username, password, request_token: tokenResult.data.request_token}
+            )
+
+            // The third stage
+            const session = await axios.post(
+                `${CONFIG.baseURL}/authentication/session/new?api_key=${CONFIG.apiKey}`,
+                {request_token: authorize.data.request_token}
+            )
+
+            setSession(session.data.session_id)
+
+            localStorage.setItem("session", session.data.session_id)
+
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
 
     return (
-        <UserContext.Provider value={{user}}>
+        <UserContext.Provider value={{user, login, session}}>
             {children}
         </UserContext.Provider>
     )
