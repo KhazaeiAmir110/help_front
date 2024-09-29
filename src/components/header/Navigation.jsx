@@ -1,6 +1,7 @@
 import {useState, useContext} from 'react';
 import {Link, NavLink} from "react-router-dom";
 import {UserContext} from "../../context/UserContext.jsx";
+import toast from "react-hot-toast";
 
 const menuItems = [
     {path: '/movies', title: 'Movies'},
@@ -12,10 +13,16 @@ const menuItems = [
 function Navigation() {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
 
-    const {user, session} = useContext(UserContext);
+    const {user} = useContext(UserContext);
 
     function activeClass({isActive}) {
         return isActive ? "text-[#dcf836]" : "hover:text-white";
+    }
+
+    // logout
+    function logout() {
+        localStorage.removeItem("session");
+        toast.success(`Logout ${user.username}`);
     }
 
     return (
@@ -54,7 +61,7 @@ function Navigation() {
                             </NavLink>
                                 </li>
                                 <li>
-                                    <button onClick={() => localStorage.removeItem("session")}>
+                                    <button onClick={logout}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                              fill="currentColor"
                                              className="bi bi-box-arrow-right" viewBox="0 0 16 16">

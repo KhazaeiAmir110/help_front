@@ -4,6 +4,7 @@ import axios from "axios";
 
 import {CONFIG, posterImage} from "../../../config.js";
 import {UserContext} from "../../../context/UserContext.jsx";
+import toast from "react-hot-toast";
 
 function MovieTV(props) {
 
@@ -26,25 +27,40 @@ function MovieTV(props) {
 
     // Add to watch MovieTV
     function handleAddToWatchList() {
-        axios.post(
-            `${CONFIG.baseURL}/account/${user.id}/watchlist?api_key=${CONFIG.apiKey}&session_id=${session}`,
-            {
-                media_type: props.type,
-                media_id: movieTv.id,
-                watchlist: true
-            }
-        )
+        if (user) {
+            axios.post(
+                `${CONFIG.baseURL}/account/${user.id}/watchlist?api_key=${CONFIG.apiKey}&session_id=${session}`,
+                {
+                    media_type: props.type,
+                    media_id: movieTv.id,
+                    watchlist: true
+                }
+            )
+                .then(() => {
+                    toast.success("Movie added!");
+                })
+        } else {
+            toast.error("You are not logged in!");
+        }
+
     }
 
     function handleDeleteToWatchList() {
-         axios.post(
+        if (user) {
+            axios.post(
             `${CONFIG.baseURL}/account/${user.id}/watchlist?api_key=${CONFIG.apiKey}&session_id=${session}`,
             {
                 media_type: props.type,
                 media_id: movieTv.id,
                 watchlist: false
             }
-        )
+            )
+                .then(() => {
+                    toast.success("Movie deleted!");
+                })
+        } else {
+            toast.error("You are not logged in !")
+        }
     }
 
     return (

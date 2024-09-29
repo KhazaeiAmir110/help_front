@@ -2,6 +2,7 @@ import {createContext, useEffect, useState} from "react";
 import axios from "axios";
 
 import {CONFIG} from "../config.js";
+import toast from "react-hot-toast";
 
 export const UserContext = createContext({});
 
@@ -50,11 +51,12 @@ function UserProvider({children}) {
             )
 
             setSession(session.data.session_id)
-
             localStorage.setItem("session", session.data.session_id)
+            toast.success("User logged in successfully")
 
-        } catch (error) {
-            console.error(error)
+        } catch  {
+            toast.error('Invalid username or password');
+
         }
     }
 
