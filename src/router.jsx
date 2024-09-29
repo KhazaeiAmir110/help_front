@@ -7,12 +7,17 @@ import Person from "./components/pages/single/Person.jsx";
 import People from "./components/pages/People.jsx";
 import Login from "./components/authentication/login/Login.jsx";
 import Register from "./components/authentication/register/Register.jsx";
+import UserProvider from "./context/UserContext.jsx";
 
 
 export const routers = createBrowserRouter(
     [
         {
-            element: <App />,
+            element: (
+                <UserProvider>
+                    <App />
+                </UserProvider>
+            ),
             children: [
                 {
                     path: "/",
