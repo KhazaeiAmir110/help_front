@@ -1,13 +1,17 @@
 import {createContext, useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
+
 import axios from "axios";
+import toast from "react-hot-toast";
 
 import {CONFIG} from "../config.js";
-import toast from "react-hot-toast";
+
 
 export const UserContext = createContext({});
 
 
 function UserProvider({children}) {
+    const navigate = useNavigate();
     const [user, setUser] = useState(null);
     const [session, setSession] = useState(initSession);
 
@@ -53,6 +57,10 @@ function UserProvider({children}) {
             setSession(session.data.session_id)
             localStorage.setItem("session", session.data.session_id)
             toast.success("User logged in successfully")
+            navigate(
+                "/",
+                {replace: true,}
+            )
 
         } catch  {
             toast.error('Invalid username or password');
