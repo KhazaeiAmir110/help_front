@@ -1,9 +1,16 @@
+import {useContext} from "react";
+
+import {UserContext} from "../../../context/UserContext.jsx";
+
 function Login() {
+    const {login, session} = useContext(UserContext)
 
     function handleSubmit(e) {
         e.preventDefault();
 
         const {username, password} = e.target.elements;
+
+        login(username.value, password.value);
     }
 
     return (
