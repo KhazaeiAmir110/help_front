@@ -13,7 +13,6 @@ function Navigation() {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
 
     const {user} = useContext(UserContext);
-    console.log(user);
 
     function activeClass({isActive}) {
         return isActive ? "text-[#dcf836]" : "hover:text-white";
