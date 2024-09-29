@@ -1,4 +1,4 @@
-import {createContext, useState} from "react";
+import {createContext, useEffect, useState} from "react";
 import axios from "axios";
 
 import {CONFIG} from "../config.js";
@@ -13,6 +13,21 @@ function UserProvider({children}) {
     function initSession() {
         return localStorage.getItem("session") ? localStorage.getItem("session") : null;
     }
+
+    async function getUserData() {
+        const {data} = await axios.get(
+            `${CONFIG.baseURL}/account?api_key=${CONFIG.apiKey}&session_id=${session}`
+        )
+
+        setUser(data);
+        console.log(data);
+    }
+
+    useEffect(() => {
+        if (session) {
+            getUserData()
+        }
+    }, [session]);
 
 
     async function login(username, password) {
