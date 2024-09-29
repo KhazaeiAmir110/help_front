@@ -1,7 +1,7 @@
 import {useLocation} from "react-router-dom";
 
 import Navigation from "./Navigation.jsx";
-import SearchBox from "./SearchBox.jsx";
+import SearchBox from "./SearchBox/SearchBox.jsx";
 import FollowUs from "./FollowUs.jsx";
 import Slider from "./Slider.jsx";
 
