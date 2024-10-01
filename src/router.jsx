@@ -8,6 +8,8 @@ import People from "./components/pages/People.jsx";
 import Login from "./components/authentication/login/Login.jsx";
 import Register from "./components/authentication/register/Register.jsx";
 import UserProvider from "./context/UserContext.jsx";
+import Profile from "./components/pages/profile/Profile.jsx";
+import Dashboard from "./components/pages/profile/Dashboard.jsx";
 
 
 export const routers = createBrowserRouter(
@@ -55,6 +57,19 @@ export const routers = createBrowserRouter(
                     path: "/register",
                     element: <Register />
                 },
+            ]
+        },
+        {
+          element: (
+              <UserProvider>
+                  <Profile />
+              </UserProvider>
+          ),
+            children: [
+                {
+                    path: "/profile",
+                    element: <Profile />
+                }
             ]
         }
     ]
