@@ -31,6 +31,15 @@ function UserProvider({children}) {
     useEffect(() => {
         if (session) {
             getUserData()
+            localStorage.setItem("session", session)
+            window.fetch.defaults.params.session_id = session;
+
+            if (location.pathname === "/login") {
+                navigate(
+                    "/profile",
+                    {replace: true, state: [user, logout]}
+                )
+            }
         }
     }, [session]);
 
@@ -55,12 +64,8 @@ function UserProvider({children}) {
             )
 
             setSession(session.data.session_id)
-            localStorage.setItem("session", session.data.session_id)
+
             toast.success("User logged in successfully")
-            navigate(
-                "/",
-                {replace: true,}
-            )
 
         } catch  {
             toast.error('Invalid username or password');
@@ -75,6 +80,10 @@ function UserProvider({children}) {
         setSession(null);
         localStorage.clear()
         toast.success(`Logout ${user.username}`);
+        navigate(
+            "/",
+            {replace: true,}
+        )
     }
 
 
