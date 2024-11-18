@@ -4,7 +4,7 @@ class Product extends Component {
     render() {
         return (
             <h1>
-                Hello , Word!
+                Hello {this.props.name}!
             </h1>
         )
     }
