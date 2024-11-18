@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <Product name={"Amir"}/>
+      <Product product={{name:"Amir", title:"IRE", price:"2000"}} available={true}/>
     </>
   )
 }
