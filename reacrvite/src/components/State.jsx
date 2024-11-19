@@ -8,6 +8,8 @@ export default function StateCount() {
             <h1>{count}</h1>
             <button onClick={() => setCount(count + 1)}>Change +</button>
             <button onClick={() => setCount(count - 1)}>Change -</button>
+            <hr/>
+
         </>
     )
 }
