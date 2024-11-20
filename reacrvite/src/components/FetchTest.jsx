@@ -1,20 +1,32 @@
 import {useState} from "react";
+import axios from "axios";
 
 
 export default function FetchTest() {
-    const [data, setData] = useState({});
+    const [dataFetch, setDataFetch] = useState({});
+    const [dataAxios, setDataAxios] = useState({});
 
+    // fetch
     fetch("https://catfact.ninja/fact/").then(
         res => res.json()
     ).then(
-        (data) => setData(data),
+        (data) => setDataFetch(data),
+    )
+
+    // axios
+    axios.get("https://catfact.ninja/fact/").then(
+        res => {
+            setDataAxios(res.data)
+        }
     )
 
     return (
         <>
-            <p>{data.fact}</p>
+            <h4>Fetch :</h4>
+            <p>{dataFetch.fact}</p>
             <hr/>
-
+            <h4>Axios :</h4>
+            <p>{dataAxios.fact}</p>
         </>
     )
 }
