@@ -4,6 +4,7 @@ import StateCount from "./hooks/useState/StateCount.jsx";
 import StateShow from "./hooks/useState/StateShow.jsx";
 import StateInput from "./hooks/useState/StateInput.jsx";
 import EffectTest from "./hooks/useEffect/EffectTest.jsx";
+import FetchTest from "./components/FetchTest.jsx";
 
 
 export default function RoutesBase() {
@@ -21,6 +22,7 @@ export default function RoutesBase() {
                        )}
                 />
                 <Route path="/effect" element={<EffectTest/>}/>
+                <Route path="/fetch" element={<FetchTest/>}/>
             </Routes>
         </BrowserRouter>
     )
