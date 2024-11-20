@@ -12,5 +12,10 @@ a) Built-in Component
 b) Class Component
 c) Function Component
 
++ چرخه حیات component :
+1) mounting => زمان تولد
+2) updating => تغییر قسمت یا کل
+3) unmounting => زمان مرگ
+
 4) State :
 دیتای برنامه ما است که میتواند تغییر کند.(نوعی کامپوننت است)
