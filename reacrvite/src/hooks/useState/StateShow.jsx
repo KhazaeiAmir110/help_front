@@ -10,6 +10,7 @@ export default function StateShow() {
             {
                 show && <h2>Behaving me to</h2>
             }
+            <hr />
         </>
     )
 }
