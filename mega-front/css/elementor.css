@@ -1,0 +1,23 @@
+.elementor-1 p::before{
+    content: 'قیمت  ';
+    color: #ff6b3b;
+}
+
+.elementor-1 p::after{
+    content: ' هزارتومان';
+    color: #31252c;
+}
+
+::marker{
+    color: #ff6b3b;
+}
+
+::selection{
+    color: blueviolet;
+    background-color: #C7B5D599;
+}
+
+.elementor-2 p::first-line{
+    font-size: 40px;
+    color: cornflowerblue;
+}

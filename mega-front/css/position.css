@@ -1,0 +1,21 @@
+.pos_1{
+    width: 250px;
+    height: 250px;
+    background-color: #ff6b3b;
+    position: relative;
+    /*position: fixed , sticky; میچسبد به یک قسمتی و با اسکرول صحفه هم نمیرود*/
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+}
+
+.pos_2{
+    width: 50px;
+    height: 50px;
+    background-color: #31252c;
+    position: absolute; /*نسبت به پدر خود تغییر میکند.*/
+    top: 50px;
+    right: 50px;
+    bottom: 30px;
+}

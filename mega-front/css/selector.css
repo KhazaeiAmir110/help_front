@@ -1,0 +1,29 @@
+/*
+!important => 100
+id    => 10
+class => 5
+tag   => 1
+*/
+
+/* 5 + 1*/
+/*.body_ir h1{*/
+/*    font-size: 40px;*/
+/*    color: cornflowerblue;*/
+/*}*/
+/*5*/
+.start{
+    color: antiquewhite;
+}
+
+/*5*/
+/*.end{*/
+/*    color: blueviolet !important;*/
+/*}*/
+
+.part+h1{
+    color: crimson;
+}
+
+.part~h1{
+    font-size: 10px;
+}
