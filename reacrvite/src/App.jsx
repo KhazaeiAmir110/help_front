@@ -1,8 +1,15 @@
-import './App.css'
+import {QueryClient, QueryClientProvider} from "react-query";
+
 import RoutesBase from "./RoutesBase.jsx";
+import './App.css'
+
 
 export default function App() {
+    const client = new QueryClient()
+
     return (
-        <RoutesBase/>
+        <QueryClientProvider client={client}>
+            <RoutesBase/>
+        </QueryClientProvider>
     )
 }
