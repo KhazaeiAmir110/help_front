@@ -1,6 +1,7 @@
 import {ContextTest, UseContextTest} from "../hooks/useContext/ContextTest.jsx";
 import {useContext} from "react";
 import ReactQuery from "./ReactQuery.jsx";
+import {FormTest} from "./FormTest.jsx";
 
 
 export default function AllTest() {
@@ -12,6 +13,8 @@ export default function AllTest() {
             <UseContextTest />
             <hr/>
             <ReactQuery/>
+            <hr/>
+            <FormTest/>
             <hr/>
         </>
     )
