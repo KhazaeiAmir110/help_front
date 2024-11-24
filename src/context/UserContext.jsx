@@ -1,15 +1,14 @@
 import {createContext, useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
-
-import axios from "axios";
 import toast from "react-hot-toast";
 
-import {CONFIG} from "../config.js";
+import {fetchData} from "../services/fetchData.js";
 
 
 export const UserContext = createContext({});
 
 
+// eslint-disable-next-line react/prop-types
 function UserProvider({children}) {
     const navigate = useNavigate();
     const [user, setUser] = useState(null);
@@ -19,20 +18,16 @@ function UserProvider({children}) {
         return localStorage.getItem("session") ? localStorage.getItem("session") : null;
     }
 
-    async function getUserData() {
-        const {data} = await axios.get(
-            `${CONFIG.baseURL}/account?api_key=${CONFIG.apiKey}&session_id=${session}`
-        )
-
-        setUser(data);
-        console.log(data);
+    async function getUserData(){
+        const {data} = await fetchData.get(`account`).then().catch()
+        setUser(data)
     }
 
     useEffect(() => {
         if (session) {
-            getUserData()
+            window.fetchData.defaults.params.session_id = session;
+            getUserData().then()
             localStorage.setItem("session", session)
-            window.fetch.defaults.params.session_id = session;
 
             if (location.pathname === "/login") {
                 navigate(
@@ -47,23 +42,23 @@ function UserProvider({children}) {
     async function login(username, password) {
         try {
             // The first stage
-            const tokenResult = await axios.get(
-                `${CONFIG.baseURL}/authentication/token/new?api_key=${CONFIG.apiKey}`
-            )
+            const tokenResult = await fetchData.get(`authentication/token/new`)
 
             // The second stage
-            const authorize = await axios.post(
-                `${CONFIG.baseURL}/authentication/token/validate_with_login?api_key=${CONFIG.apiKey}`,
+            const authorize = await fetchData.post(
+                `authentication/token/validate_with_login`,
                 {username, password, request_token: tokenResult.data.request_token}
             )
 
             // The third stage
-            const session = await axios.post(
-                `${CONFIG.baseURL}/authentication/session/new?api_key=${CONFIG.apiKey}`,
+            const session = await fetchData.post(
+                `authentication/session/new`,
                 {request_token: authorize.data.request_token}
             )
 
             setSession(session.data.session_id)
+            // fetch data => fix session id
+            window.fetchData.defaults.params.session_id = session.data.session_id;
 
             toast.success("User logged in successfully")
 
@@ -79,6 +74,8 @@ function UserProvider({children}) {
         setUser(null);
         setSession(null);
         localStorage.clear()
+        // fetch data => fix session id
+        delete window.fetchData.defaults.params.session_id
         toast.success(`Logout ${user.username}`);
         navigate(
             "/",
