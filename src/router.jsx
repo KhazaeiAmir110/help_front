@@ -30,7 +30,7 @@ export const routers = createBrowserRouter(
                     element: <MovieTV />
                 },
                 {
-                    path: "/movies/:id",
+                    path: "/movie/:id",
                     element: <MovieTV type={"movie"}/>
                 },
                 {
