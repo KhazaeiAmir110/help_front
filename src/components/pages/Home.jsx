@@ -1,8 +1,5 @@
 import MovieListSlider from "../movies/MoviesListSlider.jsx";
-import {useEffect, useState} from "react";
-import axios from "axios";
-import {CONFIG} from "../../config.js";
-import * as path from "node:path";
+import {useState} from "react";
 
 
 function Home() {
@@ -10,7 +7,7 @@ function Home() {
     const [movies, setMovies] = useState({movie: [], onTv: [], person: []});
 
     const [moviesActiveTab, setMoviesActiveTab] = useState("now_playing");
-    const [tvActiveTab, settvActiveTab] = useState("airing_today");
+    const [tvActiveTab, setTVActiveTab] = useState("airing_today");
     
     // movies
     function handelChangeMoviesActiveTab(tab) {
@@ -23,35 +20,12 @@ function Home() {
     
     // tv
     function handelChangeTVActiveTab(tab) {
-        setMoviesActiveTab(tab)
+        setTVActiveTab(tab)
     }
 
     function activeClassTV(tab) {
-        return tab === moviesActiveTab && "text-yellow-500";
+        return tab === tvActiveTab && "text-yellow-500";
     }
-
-    // async function loadApi(type, path) {
-    //
-    //     const url = `${CONFIG.baseURL}/${path}?api_key=${CONFIG.apiKey}`
-    //     const {data} = await axios.get(url);
-    //
-    //     setMovies(prevMovies => ({
-    //         ...prevMovies,
-    //         [type]: data.results
-    //     }));
-    // }
-    //
-    // useEffect(() => {
-    //     loadApi("movie", "movie/popular")
-    // }, [])
-    //
-    // useEffect(() => {
-    //     loadApi("onTv", "tv/popular")
-    // }, [])
-    //
-    // useEffect(() => {
-    //     loadApi("person", "person/popular");
-    // }, []);
 
     return (
         <div className={"container"}>
@@ -76,7 +50,7 @@ function Home() {
                         </li>
                     </ul>
                 </div>
-                <MovieListSlider moveis={movies.movie} type="movie" activeTab={moviesActiveTab}/>
+                <MovieListSlider type="movie" activeTab={moviesActiveTab}/>
             </div>
 
             {/*TV*/}
@@ -85,14 +59,22 @@ function Home() {
                     <a href={"#"}><h2 className={"text-slate-100 hover:text-yellow-500 text-4xl"}>On TV</h2></a>
 
                     <ul className={"flex gap-4 uppercase text-xl [&>*]:cursor-pointer"}>
-                        <li onClick={() => handelChangeMoviesActiveTab("airing_today")}
-                            className={`hover:text-[#dcf836] ${activeClassMovies('airing_today')}`}>Airing Today</li>
+                        <li onClick={() => handelChangeTVActiveTab("airing_today")}
+                            className={`hover:text-[#dcf836] ${activeClassTV('airing_today')}`}>
+                            Airing Today
+                        </li>
 
-                        <li className={"hover:text-[#dcf836]"}>Coming soon</li>
-                        <li className={"hover:text-[#dcf836]"}>Top rated</li>
+                        <li onClick={() => handelChangeTVActiveTab("popular")}
+                            className={`hover:text-[#dcf836] ${activeClassTV('popular')}`}>
+                            Popular
+                        </li>
+                        <li onClick={() => handelChangeTVActiveTab("top_rated")}
+                            className={`hover:text-[#dcf836] ${activeClassTV('top_rated')}`}>
+                            Top rated
+                        </li>
                     </ul>
                 </div>
-                <MovieListSlider moveis={movies.onTv} type="tv" activeTab={moviesActiveTab}/>
+                <MovieListSlider type="tv" activeTab={tvActiveTab}/>
             </div>
 
             {/*People*/}
