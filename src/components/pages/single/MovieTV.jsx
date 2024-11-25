@@ -5,6 +5,7 @@ import axios from "axios";
 import {CONFIG, posterImage} from "../../../config.js";
 import {UserContext} from "../../../context/UserContext.jsx";
 import toast from "react-hot-toast";
+import {fetchData} from "../../../services/fetchData.js";
 
 function MovieTV(props) {
 
@@ -13,9 +14,7 @@ function MovieTV(props) {
     const {user, session} = useContext(UserContext);
 
     async function fetchMovieTV() {
-        const {data} = await axios.get(
-            `${CONFIG.baseURL}/${props.type}/${id}?api_key=${CONFIG.apiKey}`
-        );
+        const {data} = await fetchData.get(`${props.type}/${id}`);
 
         setMovieTv(data)
     }
@@ -28,8 +27,8 @@ function MovieTV(props) {
     // Add to watch MovieTV
     function handleAddToWatchList() {
         if (user) {
-            axios.post(
-                `${CONFIG.baseURL}/account/${user.id}/watchlist?api_key=${CONFIG.apiKey}&session_id=${session}`,
+            fetchData.post(
+                `account/${user.id}/watchlist`,
                 {
                     media_type: props.type,
                     media_id: movieTv.id,
