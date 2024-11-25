@@ -5,7 +5,6 @@ import MovieCard from "../movies/MovieCard.jsx";
 
 // eslint-disable-next-line react/prop-types
 export default function PersonListSlider({persons}) {
-    console.log(persons);
     return (
         <Swiper
             modules={[Autoplay]}
@@ -33,7 +32,6 @@ export default function PersonListSlider({persons}) {
                         <SwiperSlide key={movie.id}>
                             <MovieCard movie={movie} type="person"/>
                         </SwiperSlide>
-
                     )
                 )
             }

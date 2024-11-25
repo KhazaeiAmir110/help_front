@@ -1,11 +1,8 @@
-import MovieListSlider from "../movies/MoviesListSlider.jsx";
+import FetchDataSlider from "../slider&card/FetchDataSlider.jsx";
 import {useState} from "react";
 
 
 function Home() {
-
-    const [movies, setMovies] = useState({movie: [], onTv: [], person: []});
-
     const [moviesActiveTab, setMoviesActiveTab] = useState("now_playing");
     const [tvActiveTab, setTVActiveTab] = useState("airing_today");
     
@@ -50,7 +47,7 @@ function Home() {
                         </li>
                     </ul>
                 </div>
-                <MovieListSlider type="movie" activeTab={moviesActiveTab}/>
+                <FetchDataSlider type="movie" activeTab={moviesActiveTab}/>
             </div>
 
             {/*TV*/}
@@ -74,21 +71,15 @@ function Home() {
                         </li>
                     </ul>
                 </div>
-                <MovieListSlider type="tv" activeTab={tvActiveTab}/>
+                <FetchDataSlider type="tv" activeTab={tvActiveTab}/>
             </div>
 
             {/*People*/}
             <div className={"mt-12 mb-12"}>
                 <div className={"md:flex gap-16 mb-8 items-center"}>
                     <a href={"#"}><h2 className={"text-slate-100 hover:text-yellow-500 text-4xl"}>People</h2></a>
-
-                    <ul className={"flex gap-4 uppercase text-xl [&>*]:cursor-pointer"}>
-                        <li className={"hover:text-[#dcf836]"}>Popular</li>
-                        <li className={"hover:text-[#dcf836]"}>Movies</li>
-                        <li className={"hover:text-[#dcf836]"}>TV shows</li>
-                    </ul>
                 </div>
-                <MovieListSlider moveis={movies.person} type="person" activeTab={moviesActiveTab}/>
+                <FetchDataSlider type="person" activeTab="popular"/>
             </div>
         </div>
     );
