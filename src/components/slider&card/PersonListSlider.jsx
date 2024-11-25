@@ -1,6 +1,6 @@
 import {Autoplay} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
-import MovieCard from "../movies/MovieCard.jsx";
+import Card from "./Card.jsx";
 
 
 // eslint-disable-next-line react/prop-types
@@ -30,7 +30,7 @@ export default function PersonListSlider({persons}) {
                 persons.map(
                     movie => (
                         <SwiperSlide key={movie.id}>
-                            <MovieCard movie={movie} type="person"/>
+                            <Card movie={movie} type="person"/>
                         </SwiperSlide>
                     )
                 )

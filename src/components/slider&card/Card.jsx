@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import {posterImage} from "../../config.js";
 
 
-function MovieCard(props) {
+function Card(props) {
     return (
         <Link to={`/${props.type}/${props.movie.id}`}>
             <div className={"bg-gray-500 aspect-[2/3] relative rounded overflow-hidden"}>
@@ -44,4 +44,4 @@ function MovieCard(props) {
     );
 }
 
-export default MovieCard;
+export default Card;
