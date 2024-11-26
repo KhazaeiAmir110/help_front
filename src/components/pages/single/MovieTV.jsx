@@ -26,6 +26,8 @@ function MovieTV(props) {
         )
     }, [id])
 
+    console.log(movieTv)
+
 
     // Add to watch MovieTV
     function handleAddToWatchList() {
@@ -86,7 +88,13 @@ function MovieTV(props) {
                                         }
                                     </h1>
                                     <time className="text-slate-500">
-                                        {/*{movieTv.release_date.split("-")[0]}*/}
+                                        {
+                                            props.type === "movie" ? (
+                                                movieTv.release_date?.split("-")[0]
+                                            ) : (
+                                                movieTv.first_air_date?.split("-")[0]
+                                            )
+                                        }
                                     </time>
                                 </div>
                             </div>
