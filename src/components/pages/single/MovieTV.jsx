@@ -15,12 +15,15 @@ function MovieTV(props) {
 
     async function fetchMovieTV() {
         const {data} = await fetchData.get(`${props.type}/${id}`);
-
         setMovieTv(data)
     }
 
     useEffect(() => {
-        fetchMovieTV()
+        fetchMovieTV().catch(
+            error => {
+                toast.error(error);
+            }
+        )
     }, [id])
 
 
@@ -64,14 +67,33 @@ function MovieTV(props) {
 
     return (
         <div>
-            <h1>{
-                props.type === "movie" ? (
-                    movieTv.title
-                ) : (
-                    movieTv.name
-                )
-            }</h1>
-            <img src={posterImage(movieTv.poster_path)} alt={movieTv.title}/>
+            <div className="ml-[50px] -mt-[0px]">
+                {
+                    movieTv ? (
+                        <div className="container grid grid-cols-4 gap-10">
+                            <div className="col-span-1">
+                                <img src={posterImage(movieTv.poster_path)} alt="{movieTv.title}"/>
+                            </div>
+                            <div className="col-span-3">
+                                <div className="flex gap-3 items-center">
+                                    <h1>{
+                                        props.type === "movie" ? (
+                                            movieTv.title
+                                        ) : (
+                                            movieTv.name
+                                        )
+                                    }</h1>
+                                    <time className="text-slate-500">
+                                        {/*{movieTv.release_date.split("-")[0]}*/}
+                                    </time>
+                                </div>
+                            </div>
+                        </div>
+                    ) : (
+                        <h1>Loading ....</h1>
+                    )
+                }
+            </div>
 
 
             {/*Add to Watch MovieTV*/}
