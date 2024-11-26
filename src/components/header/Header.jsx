@@ -15,7 +15,7 @@ function Header() {
             <header
                 className={`
                     container bg-cover py-0.5 md:pt-1 md:pb-12 items-center justify-center 
-                    ${location.pathname !== '/' ? 'h-60' : ''}
+                    ${location.pathname !== '/' ? 'h-[35rem]' : ''}
                 `}
                     style={{backgroundImage: `linear-gradient(to bottom, #00000085, #000000db),url(${image_slide})`}}>
                 <Navigation/>

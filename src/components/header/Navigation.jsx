@@ -22,7 +22,7 @@ function Navigation() {
         <>
             <nav className={'flex mt-10 mb-10 items-center justify-center text-slate-300'}>
                 <div className={'flex items-center'}>
-                    <Link to={"/profile"} state={[user, logout]}>
+                    <Link to={"/"}>
                         <h1 className={'text-2xl mr-12 hover:text-red-200'}>
                             Hyper<br/><span className={'text-5xl text-rose-600 hover:text-rose-900'}>Movies</span>
                         </h1>
