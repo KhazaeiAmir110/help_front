@@ -1,27 +1,27 @@
 import {useParams} from "react-router-dom";
 import {useContext, useEffect, useState} from "react";
-import axios from "axios";
 
-import {CONFIG, posterImage} from "../../../config.js";
+import {posterImage} from "../../../config.js";
 import {UserContext} from "../../../context/UserContext.jsx";
 import toast from "react-hot-toast";
 import {fetchData} from "../../../services/fetchData.js";
 
-function MovieTV(props) {
+// eslint-disable-next-line react/prop-types
+function MovieTV({type}) {
 
     const [movieTv, setMovieTv] = useState([]);
     const [watchList, setWatchList] = useState([]);
     const [isWatch, setIsWatch] = useState(false)
     const {id} = useParams();
-    const {user, session} = useContext(UserContext);
+    const {user} = useContext(UserContext);
 
 
     async function fetchMovieTV() {
-        const {data} = await fetchData.get(`${props.type}/${id}`);
+        const {data} = await fetchData.get(`${type}/${id}`);
         setMovieTv(data)
 
-        if (props.type === "tv") {
-            const data = await fetchData.get(`account/${id}/watchlist/${props.type}`)
+        if ("tv" === type) {
+            const data = await fetchData.get(`account/${id}/watchlist/${type}`)
             setWatchList(data)
         } else {
             const data = await fetchData.get(`account/${id}/watchlist/movies`)
@@ -49,7 +49,7 @@ function MovieTV(props) {
             fetchData.post(
                 `account/${user.id}/watchlist`,
                 {
-                    media_type: props.type,
+                    media_type: type,
                     media_id: movieTv.id,
                     watchlist: !isWatch
                 }
@@ -74,7 +74,7 @@ function MovieTV(props) {
                                 <div className="flex gap-1 items-center">
                                     <h1 className="text-slate-100 hover:text-yellow-500 text-4xl font-semibold">
                                         {
-                                            props.type === "movie" ? (
+                                            type === "movie" ? (
                                                 movieTv.title
                                             ) : (
                                                 movieTv.name
@@ -83,7 +83,7 @@ function MovieTV(props) {
                                     </h1>
                                     <time className="text-slate-500">
                                         {
-                                            props.type === "movie" ? (
+                                            type === "movie" ? (
                                                 movieTv.release_date?.split("-")[0]
                                             ) : (
                                                 movieTv.first_air_date?.split("-")[0]
