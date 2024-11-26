@@ -70,19 +70,21 @@ function MovieTV(props) {
             <div className="ml-[50px] -mt-[0px]">
                 {
                     movieTv ? (
-                        <div className="container grid grid-cols-4 gap-10">
+                        <div className="container grid grid-cols-4 gap-10 -mt-80">
                             <div className="col-span-1">
                                 <img src={posterImage(movieTv.poster_path)} alt="{movieTv.title}"/>
                             </div>
                             <div className="col-span-3">
-                                <div className="flex gap-3 items-center">
-                                    <h1>{
-                                        props.type === "movie" ? (
-                                            movieTv.title
-                                        ) : (
-                                            movieTv.name
-                                        )
-                                    }</h1>
+                                <div className="flex gap-1 items-center">
+                                    <h1 className="text-slate-100 hover:text-yellow-500 text-4xl font-semibold">
+                                        {
+                                            props.type === "movie" ? (
+                                                movieTv.title
+                                            ) : (
+                                                movieTv.name
+                                            )
+                                        }
+                                    </h1>
                                     <time className="text-slate-500">
                                         {/*{movieTv.release_date.split("-")[0]}*/}
                                     </time>
