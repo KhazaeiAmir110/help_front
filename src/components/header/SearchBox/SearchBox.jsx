@@ -1,8 +1,6 @@
 import {useEffect, useState} from "react";
 import {fetch} from "./fetch.js";
-import {data} from "autoprefixer";
 import FindItem from "./FindItem.jsx";
-
 
 
 function SearchBox() {
@@ -59,7 +57,7 @@ function SearchBox() {
                     }`}>
                 <div>
                     {searchResult.map((item) => (
-                        <FindItem item={item} />
+                        <FindItem item={item} key={item}/>
                     ))}
                 </div>
             </div>
