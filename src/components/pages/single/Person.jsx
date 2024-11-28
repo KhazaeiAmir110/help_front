@@ -42,8 +42,15 @@ function Person() {
                                 <h1 className="text-slate-100 hover:text-yellow-500 text-4xl font-semibold">
                                     {person.name}
                                 </h1>
+                                <time className="text-slate-500">
+                                    {person.birthday}
+                                </time>
                             </div>
-
+                            {/*biography*/}
+                                <div className="mt-24 flex flex-col gap-4">
+                                    <h1 className="text-slate-50 hover:text-cyan-800 text-xl font-semibold">Biography</h1>
+                                    <p className="text-slate-400">{person.biography}</p>
+                                </div>
                         </div>
                     </div>
                 ) : (
