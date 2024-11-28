@@ -1,5 +1,6 @@
 import {useParams} from "react-router-dom";
 import {useContext, useEffect, useState} from "react";
+import ReactStars from "react-rating-stars-component";
 
 import {posterImage} from "../../../config.js";
 import {UserContext} from "../../../context/UserContext.jsx";
@@ -59,6 +60,12 @@ function MovieTV({type}) {
         }
     }
 
+    // Star
+    async function ratingChanged(newRating) {
+        await fetchData.post(`${type}/${movieTv.id}/rating`, {value: newRating})
+        toast.success("Movie changed from watch list!");
+    }
+
     return (
         <div>
             <div className="ml-[50px] -mt-[0px]">
@@ -69,7 +76,6 @@ function MovieTV({type}) {
                                 <img src={posterImage(movieTv.poster_path)} alt="{movieTv.title}"/>
                             </div>
                             <div className="col-span-3">
-
                                 {/*title*/}
                                 <div className="flex gap-1 items-center">
                                     <h1 className="text-slate-100 hover:text-yellow-500 text-4xl font-semibold">
@@ -134,6 +140,43 @@ function MovieTV({type}) {
                                         </p>
                                         <span>Share</span>
                                     </button>
+                                </div>
+                                {/*star*/}
+                                <div className="grid grid-cols-4 border-slate-500 border-t-2 border-b-2 mt-8">
+                                    <div className="col-span-1 border-slate-500 border-r-2">
+                                        <div className="flex items-center gap-4">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                     width="32" height="32"
+                                                     fill="currentColor"
+                                                     className="text-yellow-500"
+                                                     viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                                </svg>
+                                            </div>
+                                            <div className="flex flex-col gap-1">
+                                                <div>{parseInt(movieTv.vote_average)} <span
+                                                    className="text-xs text-slate-500">/ 10</span>
+                                                </div>
+                                                <div className="text-xs text-sky-900">{movieTv.vote_count} reviews</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-span-3 pl-4 flex gap-4 items-center">
+                                        <p>Rate this movie : </p>
+                                        <ReactStars
+                                            count={10}
+                                            onChange={ratingChanged}
+                                            value={parseInt(movieTv.vote_average)}
+                                            size={32}
+                                            isHalf={true}
+                                            emptyIcon={<i className="far fa-star"></i>}
+                                            halfIcon={<i className="fa fa-star-half-alt"></i>}
+                                            fullIcon={<i className="fa fa-star"></i>}
+                                            activeColor="#ffd700"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
