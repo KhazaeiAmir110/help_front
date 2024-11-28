@@ -21,6 +21,7 @@ function MovieTV({type}) {
         const {data} = await fetchData.get(`${type}/${id}`);
         setMovieTv(data)
 
+
         if ("tv" === type) {
             const data = await fetchData.get(`account/${id}/watchlist/${type}`)
             setWatchList(data)
@@ -177,6 +178,11 @@ function MovieTV({type}) {
                                             activeColor="#ffd700"
                                         />
                                     </div>
+                                </div>
+                                {/*overview*/}
+                                <div className="mt-24 flex flex-col gap-4">
+                                    <h1 className="text-slate-50 hover:text-cyan-800 text-xl font-semibold">Overview</h1>
+                                    <p className="text-slate-400 w-2/3">{movieTv.overview}</p>
                                 </div>
                             </div>
                         </div>
