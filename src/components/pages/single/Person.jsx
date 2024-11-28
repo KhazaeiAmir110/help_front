@@ -18,8 +18,6 @@ function Person() {
         setPerson(data)
     }
 
-    console.log(person)
-
     useEffect(() => {
         fetchPerson()
     }, [id])
