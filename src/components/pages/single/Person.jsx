@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 import axios from "axios";
 
 import {CONFIG, posterImage} from "../../../config.js";
+import ReactStars from "react-rating-stars-component";
 
 function Person() {
 
@@ -17,14 +18,38 @@ function Person() {
         setPerson(data)
     }
 
+    console.log(person)
+
     useEffect(() => {
         fetchPerson()
     }, [id])
 
     return (
-        <div>
-            <h1>{person.name}</h1>
-            <img src={posterImage(person.profile_path)}/>
+        // <div>
+        //     <h1>{person.name}</h1>
+        //     <img src={posterImage(person.profile_path)}/>
+        // </div>
+        <div className="ml-[50px] -mt-[0px]">
+            {
+                person ? (
+                    <div className="container grid grid-cols-4 gap-10 -mt-80">
+                        <div className="col-span-1">
+                            <img src={posterImage(person.profile_path)} alt={person.name}/>
+                        </div>
+                        <div className="col-span-3">
+                            {/*name*/}
+                            <div className="flex gap-1 items-center">
+                                <h1 className="text-slate-100 hover:text-yellow-500 text-4xl font-semibold">
+                                    {person.name}
+                                </h1>
+                            </div>
+
+                        </div>
+                    </div>
+                ) : (
+                    <h1>Loading ....</h1>
+                )
+            }
         </div>
     );
 }
