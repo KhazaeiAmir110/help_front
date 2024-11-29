@@ -9,7 +9,8 @@ import Login from "./components/authentication/login/Login.jsx";
 import Register from "./components/authentication/register/Register.jsx";
 import UserProvider from "./context/UserContext.jsx";
 import Profile from "./components/pages/profile/Profile.jsx";
-import MoviesTV from "./components/pages/MoviesTV.jsx";
+import Movies from "./components/pages/Movies.jsx";
+import Tvs from "./components/pages/Tvs.jsx";
 
 
 export const routers = createBrowserRouter(
@@ -27,7 +28,7 @@ export const routers = createBrowserRouter(
                 },
                 {
                     path: "/movies",
-                    element: <MoviesTV type="movie"/>
+                    element: <Movies type="movie"/>
                 },
                 {
                     path: "/movie/:id",
@@ -35,7 +36,7 @@ export const routers = createBrowserRouter(
                 },
                 {
                     path: "/tv",
-                    element: <MoviesTV type="tv"/>
+                    element: <Tvs type="tv"/>
                 },
                 {
                     path: "/tv/:id",
