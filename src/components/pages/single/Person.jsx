@@ -1,20 +1,19 @@
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
-import axios from "axios";
 
-import {CONFIG, posterImage} from "../../../config.js";
-import ReactStars from "react-rating-stars-component";
+import {posterImage} from "../../../config.js";
+import {fetchData} from "../../../services/fetchData.js";
 
 function Person() {
 
     const [person, setPerson] = useState([]);
     const {id} = useParams();
 
-    async function fetchPerson() {
-        const {data} = await axios.get(
-            `${CONFIG.baseURL}/person/${id}?api_key=${CONFIG.apiKey}`,
-        );
+    console.log(person)
 
+    // detail
+    async function fetchPerson() {
+        const {data} = await fetchData.get(`person/${id}`);
         setPerson(data)
     }
 
@@ -23,10 +22,6 @@ function Person() {
     }, [id])
 
     return (
-        // <div>
-        //     <h1>{person.name}</h1>
-        //     <img src={posterImage(person.profile_path)}/>
-        // </div>
         <div className="ml-[50px] -mt-[0px]">
             {
                 person ? (
@@ -44,10 +39,15 @@ function Person() {
                                     {person.birthday}
                                 </time>
                             </div>
+                            <div className="mt-8 flex flex-col gap-4">
+                                <h1 className="text-slate-300 text-xm font-semibold">Place Of Birth : {person.place_of_birth}</h1>
+                                <h1 className="text-slate-300 text-sm font-semibold">Known For Department : {person.known_for_department}</h1>
+
                             {/*biography*/}
-                                <div className="mt-24 flex flex-col gap-4">
+                                <div className="flex flex-col gap-4">
                                     <h1 className="text-slate-50 hover:text-cyan-800 text-xl font-semibold">Biography</h1>
                                     <p className="text-slate-400">{person.biography}</p>
+                                </div>
                                 </div>
                         </div>
                     </div>
