@@ -5,7 +5,6 @@ import CardListPeople from "../slider&card/CardListPeople.jsx";
 function People() {
 
     const [people, setPeople] = useState([]);
-    console.log(people)
 
 
     // list movie
