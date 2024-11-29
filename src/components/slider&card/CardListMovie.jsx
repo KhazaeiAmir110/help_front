@@ -3,7 +3,6 @@ import {posterImage} from "../../config.js";
 
 
 function CardListMovie({type, movie}) {
-    console.log(movie)
     return (
         <Link className="w-48 h-96" to={`/${type}/${movie.id}`}>
             <div className={"h-full bg-white relative rounded overflow-hidden"}>

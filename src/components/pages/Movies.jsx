@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {fetchData} from "../../services/fetchData.js";
 import {posterImage} from "../../config.js";
 import CardListMovie from "../slider&card/CardListMovie.jsx";
+import {list} from "postcss";
 
 function Movies() {
 
@@ -20,13 +21,13 @@ function Movies() {
 
     // list movie
     async function fetchListMovie() {
-        const {data} = await fetchData.get("movie/top_rated");
+        const {data} = await fetchData.get("movie/popular");
         setListMovies(data)
     }
 
     useEffect(() => {
         fetchListMovie()
-    }, [listMovies.id])
+    }, [])
 
     return (
         <div>
@@ -56,7 +57,7 @@ function Movies() {
             </div>
             <div className="mt-32 ml-28 m-10 flex flex-wrap gap-8">
                 {
-                    listMovies.results?.map(movie => (
+                    listMovies?.results?.map(movie => (
                         <CardListMovie movie={movie} type="movie" key={movie.id}/>
                     ))
                 }
