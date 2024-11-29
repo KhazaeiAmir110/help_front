@@ -1,20 +1,32 @@
 import {useEffect, useState} from "react";
 import {fetchData} from "../../services/fetchData.js";
 import {posterImage} from "../../config.js";
+import CardListMovie from "../slider&card/CardListMovie.jsx";
 
 function Movies() {
 
     const [movieLatest, setMovieLatest] = useState([]);
+    const [listMovies, setListMovies] = useState([]);
 
 
+    // latest
     async function fetchMovieTV() {
         const {data} = await fetchData.get("movie/latest");
         setMovieLatest(data)
     }
-
     useEffect(() => {
         fetchMovieTV()
     }, movieLatest.id)
+
+    // list movie
+    async function fetchListMovie() {
+        const {data} = await fetchData.get("movie/top_rated");
+        setListMovies(data)
+    }
+
+    useEffect(() => {
+        fetchListMovie()
+    }, [listMovies.id])
 
     return (
         <div>
@@ -41,6 +53,13 @@ function Movies() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="mt-32 ml-28 m-10 flex flex-wrap gap-8">
+                {
+                    listMovies.results?.map(movie => (
+                        <CardListMovie movie={movie} type="movie" key={movie.id}/>
+                    ))
+                }
             </div>
         </div>
     );
