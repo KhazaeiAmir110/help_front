@@ -65,7 +65,7 @@ function Profile() {
                                 </nav>
                             </header>
                         </div>
-                        <Dashboard />
+                        <Dashboard user={user}/>
                     </div>
                 ) : (
                     <NavLink to={"/login"}/>

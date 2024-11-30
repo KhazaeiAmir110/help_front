@@ -13,7 +13,7 @@ function Card(props) {
                     className={"flex flex-col p-6 justify-end absolute bottom-0 left-0 w-full h-fit bg-gradient-to-b from-[#00000003] to-[#000000cc] hover:to-[#000]"}>
                     <h3 className={"uppercase"}>
                         {
-                            props.type === "movies" ? (
+                            props.type === "movie" ? (
                                 props.movie.title
                             ) : (
                                 props.movie.name
