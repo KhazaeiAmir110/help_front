@@ -1,7 +1,10 @@
 function Home() {
 
     return (
-        <h1>سلام بر MUI</h1>
+        <>
+            <h1>سلام بر MUI</h1>
+        </>
+
     );
 }
 
