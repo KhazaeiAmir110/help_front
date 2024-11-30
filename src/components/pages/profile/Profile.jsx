@@ -1,13 +1,13 @@
 import {NavLink} from "react-router-dom";
-import image_slide from "/public/images/header-profile.jpg";
 import {useContext} from "react";
-import {UserContext} from "../../context/UserContext.jsx";
-import {posterImage} from "../../config.js";
+
+import image_slide from "/public/images/header-profile.jpg";
+import {UserContext} from "../../../context/UserContext.jsx";
+import {posterImage} from "../../../config.js";
+import Dashboard from "./Dashboard.jsx";
 
 function Profile() {
     const {user, logout} = useContext(UserContext);
-
-
     return (
         <>
             {
@@ -27,6 +27,11 @@ function Profile() {
                                             My<br/><span
                                             className={'text-5xl text-fuchsia-100 hover:text-rose-900'}>Profile</span>
                                         </h1>
+                                    </div>
+                                    <div className={"w-24 "}>
+                                        <img className={"rounded-3xl w-full"}
+                                             src={posterImage(user.avatar.tmdb.avatar_path)}
+                                             alt={"avatar"}/>
                                     </div>
                                     <div className={'hidden md:block ml-auto text-sm lg:text-base uppercase'}>
                                         <ul className={'flex gap-4'}>
@@ -60,11 +65,7 @@ function Profile() {
                                 </nav>
                             </header>
                         </div>
-                        <div>
-                            {user.username}
-                            <img className={"rounded-full"} src={posterImage(user.avatar.tmdb.avatar_path)}
-                                 alt={"avatar"}/>
-                        </div>
+                        <Dashboard />
                     </div>
                 ) : (
                     <NavLink to={"/login"}/>

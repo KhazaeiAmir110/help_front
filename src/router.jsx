@@ -8,7 +8,7 @@ import People from "./components/pages/People.jsx";
 import Login from "./components/authentication/login/Login.jsx";
 import Register from "./components/authentication/register/Register.jsx";
 import UserProvider from "./context/UserContext.jsx";
-import Profile from "./components/pages/Profile.jsx";
+import Profile from "./components/pages/profile/Profile.jsx";
 import Movies from "./components/pages/Movies.jsx";
 import Tvs from "./components/pages/Tvs.jsx";
 
