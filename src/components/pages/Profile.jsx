@@ -1,8 +1,8 @@
-import Dashboard from "./Dashboard.jsx";
 import {NavLink} from "react-router-dom";
 import image_slide from "/public/images/header-profile.jpg";
 import {useContext} from "react";
-import {UserContext} from "../../../context/UserContext.jsx";
+import {UserContext} from "../../context/UserContext.jsx";
+import {posterImage} from "../../config.js";
 
 function Profile() {
     const {user, logout} = useContext(UserContext);
@@ -60,7 +60,11 @@ function Profile() {
                                 </nav>
                             </header>
                         </div>
-                        <Dashboard/>
+                        <div>
+                            {user.username}
+                            <img className={"rounded-full"} src={posterImage(user.avatar.tmdb.avatar_path)}
+                                 alt={"avatar"}/>
+                        </div>
                     </div>
                 ) : (
                     <NavLink to={"/login"}/>
