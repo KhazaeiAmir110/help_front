@@ -24,7 +24,7 @@ function Home() {
         const payment_weight = Math.ceil(spotPrice * netWeight);
         const payment_hallmark = Math.ceil((hallmark / 100) * payment_weight);
         const payment_markup = Math.ceil((payment_weight + payment_hallmark) * (markup / 100));
-        const payment_final = payment_weight + payment_hallmark + payment_markup;
+        const payment_final = payment_weight + payment_hallmark + payment_markup + Number(attachments);
 
         setPaymentWeight(payment_weight);
         setPaymentHallmark(payment_hallmark);
@@ -177,32 +177,3 @@ function Home() {
 }
 
 export default Home;
-
-
-/*
-* <form className="mt-0 block isolate" action="https://saatchico.com/calculator" method="POST">
-                    <input type="hidden" name="_token" value="hkPpYGcOHMkuNyAPKaNC27ZmemMqJyQjS9ywD4A6"/>
-                    <div className="form-group">
-                        <div className={"flex flex-wrap -mx-4"}>
-                            <div className={"relative mt-2.5 flex justify-between mb-7"}>
-                                <div className={"flex flex-col gap-8"}>
-                                    <div className={"relative pr-0 pl-0 w-full"}>
-                                        <label htmlFor="carat" className="pt-3 mt-1">نرخ طلا:</label>
-                                    </div>
-                                    <div className={"relative col-md-8 w-full"}>
-                                        <input type="text"
-                                               className={"w-full h-[43px] border border-gray-300 rounded-md text-gray-800 p-1 pl-52 text-sm"}
-                                               id="carat"
-                                               name="carat_price" inputMode="numeric" value="4546609" required=""
-                                               maxLength="19" data-parsley-id="5"/>
-                                        <span
-                                            className={"absolute left-[1px] bottom-[1px] h-[41px] flex items-center px-8 border-r border-gray-300 rounded-l-md"}>تومان</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex flex-wrap -mx-4"></div>
-                        <div className="flex flex-wrap -mx-4"></div>
-                    </div>
-                </form>
-                * */
