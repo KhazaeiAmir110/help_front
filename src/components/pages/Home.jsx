@@ -44,7 +44,7 @@ function Home() {
                 <div className="flex flex-col gap-8">
                     <div className="flex items-center justify-between">
                         <h1>نرخ طلا :</h1>
-                        <FormControl className="w-4/5 ml-0 pl-8" sx={{m: 1}} variant="filled">
+                        <FormControl className="w-4/5 ml-0 pl-8" sx={{m: 1}} size="small" variant="filled">
                             <InputLabel htmlFor="filled-adornment-amount"></InputLabel>
                             <FilledInput
                                 id="filled-adornment-amount"
@@ -57,7 +57,7 @@ function Home() {
                     <div className="flex items-center justify-between">
                         <div>
                             <h1>وزن خالص طلا:</h1>
-                            <FormControl className="w-4/5 ml-0 pl-8" sx={{m: 1}} variant="filled">
+                            <FormControl className="w-4/5 ml-0 pl-8" sx={{m: 1}} size="small" variant="filled">
                                 <InputLabel htmlFor="filled-adornment-amount"></InputLabel>
                                 <FilledInput
                                     id="filled-adornment-amount"
@@ -68,7 +68,7 @@ function Home() {
                         </div>
                         <div>
                             <h1>ملحقات:</h1>
-                            <FormControl className="w-4/5 ml-0 pl-8" sx={{m: 1}} variant="filled">
+                            <FormControl className="w-4/5 ml-0 pl-8" sx={{m: 1}} size="small" variant="filled">
                                 <InputLabel htmlFor="filled-adornment-amount"></InputLabel>
                                 <FilledInput
                                     id="filled-adornment-amount"
@@ -82,7 +82,7 @@ function Home() {
                     <div className="flex items-center justify-between">
                         <div>
                             <h1>اجرت ساخت:</h1>
-                            <FormControl className="w-4/5 ml-0 pl-8" sx={{m: 1}} variant="filled">
+                            <FormControl className="w-4/5 ml-0 pl-8" sx={{m: 1}} size="small" variant="filled">
                                 <InputLabel htmlFor="filled-adornment-amount"></InputLabel>
                                 <FilledInput
                                     id="filled-adornment-amount"
@@ -93,7 +93,7 @@ function Home() {
                         </div>
                         <div>
                             <h1>سود فروش:</h1>
-                            <FormControl className="w-4/5 ml-0 pl-8" sx={{m: 1}} variant="filled">
+                            <FormControl className="w-4/5 ml-0 pl-8" sx={{m: 1}} size="small" variant="filled">
                                 <InputLabel htmlFor="filled-adornment-amount"></InputLabel>
                                 <FilledInput
                                     id="filled-adornment-amount"
