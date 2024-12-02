@@ -50,6 +50,9 @@ function Home() {
                                 id="filled-adornment-amount"
                                 startAdornment={<InputAdornment position="start">تومان</InputAdornment>}
                                 defaultValue={spotPrice}
+                                value={spotPrice}
+                                onChange={(e) => setSpotPrice(e.target.value)}
+                                sx={{height: "2.5rem"}}
                             />
                         </FormControl>
                     </div>
@@ -63,6 +66,9 @@ function Home() {
                                     id="filled-adornment-amount"
                                     startAdornment={<InputAdornment position="start">گرم</InputAdornment>}
                                     defaultValue={netWeight}
+                                    value={netWeight}
+                                    onChange={(e) => setNetWeight(e.target.value)}
+                                    sx={{height: "2.5rem"}}
                                 />
                             </FormControl>
                         </div>
@@ -74,6 +80,9 @@ function Home() {
                                     id="filled-adornment-amount"
                                     startAdornment={<InputAdornment position="start">تومان</InputAdornment>}
                                     defaultValue={attachments}
+                                    value={attachments}
+                                    onChange={(e) => setAttachments(e.target.value)}
+                                    sx={{height: "2.5rem"}}
                                 />
                             </FormControl>
                         </div>
@@ -88,6 +97,9 @@ function Home() {
                                     id="filled-adornment-amount"
                                     startAdornment={<InputAdornment position="start">%</InputAdornment>}
                                     defaultValue={hallmark}
+                                    value={hallmark}
+                                    onChange={(e) => setHallmark(e.target.value)}
+                                    sx={{height: "2.5rem"}}
                                 />
                             </FormControl>
                         </div>
@@ -99,6 +111,9 @@ function Home() {
                                     id="filled-adornment-amount"
                                     startAdornment={<InputAdornment position="start">%</InputAdornment>}
                                     defaultValue={markup}
+                                    value={markup}
+                                    onChange={(e) => setMarkup(e.target.value)}
+                                    sx={{height: "2.5rem"}}
                                 />
                             </FormControl>
                         </div>
