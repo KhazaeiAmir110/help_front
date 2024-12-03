@@ -1,13 +1,23 @@
 import {useEffect, useState} from "react";
 
 /**
- * Calculate the final payment based on various parameters.
- * @param {number} spotPrice - The price per unit of the spot.
- * @param {number} netWeight - The net weight of the item.
- * @param {number} attachments - Additional charges or costs.
- * @param {number} hallmark - The percentage of hallmark.
- * @param {number} markup - The percentage markup to apply.
- * @returns {{payment_final: number, payment_markup: number, payment_weight: number, payment_hallmark: number}} The final calculated payment.
+ * A service to calculate various payment components based on the given parameters.
+ *
+ * This service computes the payment weight, hallmark value, markup amount, and final payment
+ * based on the specified spot price, net weight, additional attachments, hallmark percentage,
+ * and markup percentage.
+ *
+ * @param {number} [spotPrice=1] - The price per unit of the spot (default is 1).
+ * @param {number} [netWeight=1] - The net weight of the item (default is 1).
+ * @param {number} [attachments=0] - Additional charges or costs (default is 0).
+ * @param {number} [hallmark=18] - The percentage of hallmark (default is 18).
+ * @param {number} [markup=7] - The percentage markup to apply (default is 7).
+ * @returns {{paymentWeight: number, paymentHallmark: number, paymentMarkup: number, paymentFinal: number}}
+ * The calculated payment components, including:
+ * - paymentWeight: The computed payment weight.
+ * - paymentHallmark: The computed hallmark value.
+ * - paymentMarkup: The computed markup amount.
+ * - paymentFinal: The final calculated payment amount.
  */
 function CalculatorService(spotPrice = 1, netWeight = 1, attachments = 0, hallmark = 18, markup = 7) {
     const [paymentWeight, setPaymentWeight] = useState(0);

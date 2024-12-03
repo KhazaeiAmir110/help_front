@@ -6,14 +6,22 @@ import {FilledInput, FormControl, InputAdornment, InputLabel} from "@mui/materia
 
 import CalculatorService from "../../services/CalculatorService.js";
 
+/**
+ * A component that manages the state and calculations for a gold pricing calculator.
+ *
+ * This component defines the necessary states for calculating the price of gold based on
+ * the spot price, net weight, additional attachments, hallmark percentage, and markup percentage.
+ * It utilizes the `CalculatorService` to compute various payment components.
+ *
+ * @returns {JSX.Element} A React component that renders the gold pricing calculator.
+ */
+
 function Home() {
-    const [spotPrice, setSpotPrice] = useState(4569694); // نرخ طلا
-
-    const [netWeight, setNetWeight] = useState(1); // وزن خالص
+    const [spotPrice, setSpotPrice] = useState(4569694);
+    const [netWeight, setNetWeight] = useState(1);
     const [attachments, setAttachments] = useState(0);
-
-    const [hallmark, setHallmark] = useState(18); // اجرت ساخت
-    const [markup, setMarkup] = useState(7); // سود فروش
+    const [hallmark, setHallmark] = useState(18);
+    const [markup, setMarkup] = useState(7);
 
     const {
         paymentWeight,
@@ -23,7 +31,6 @@ function Home() {
     } = CalculatorService(spotPrice, netWeight, attachments, hallmark, markup);
 
     const [loading, setLoading] = useState(false);
-
     function handleClick() {
         setLoading(true);
     }
