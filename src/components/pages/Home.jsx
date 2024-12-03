@@ -1,4 +1,7 @@
 import {useState} from "react";
+
+import LoadingButton from '@mui/lab/LoadingButton';
+import SaveIcon from '@mui/icons-material/Save';
 import {FilledInput, FormControl, InputAdornment, InputLabel} from "@mui/material";
 
 import CalculatorService from "../../services/CalculatorService.js";
@@ -18,6 +21,12 @@ function Home() {
         paymentMarkup,
         paymentFinal
     } = CalculatorService(spotPrice, netWeight, attachments, hallmark, markup);
+
+    const [loading, setLoading] = useState(false);
+
+    function handleClick() {
+        setLoading(true);
+    }
 
 
     return (
@@ -153,6 +162,19 @@ function Home() {
                         </div>
                     </div>
 
+                </div>
+
+                <div className="flex place-content-end mt-8">
+                    <LoadingButton
+                        color="inherit"
+                        onClick={handleClick}
+                        loading={loading}
+                        loadingPosition="start"
+                        startIcon={<SaveIcon className="ml-2"/>}
+                        variant="contained"
+                    >
+                        صدورفاکتور
+                    </LoadingButton>
                 </div>
             </div>
         </div>
