@@ -1,9 +1,9 @@
+import {useState} from "react";
 import {FilledInput, FormControl, InputAdornment, InputLabel} from "@mui/material";
-import {useEffect, useState} from "react";
+
+import CalculatorService from "../../services/CalculatorService.js";
 
 function Home() {
-
-
     const [spotPrice, setSpotPrice] = useState(4569694); // نرخ طلا
 
     const [netWeight, setNetWeight] = useState(1); // وزن خالص
@@ -12,29 +12,12 @@ function Home() {
     const [hallmark, setHallmark] = useState(18); // اجرت ساخت
     const [markup, setMarkup] = useState(7); // سود فروش
 
-
-    // payments
-    const [paymentWeight, setPaymentWeight] = useState(0);
-    const [paymentHallmark, setPaymentHallmark] = useState(0);
-    const [paymentMarkup, setPaymentMarkup] = useState(0);
-    const [paymentFinal, setPaymentFinal] = useState(0);
-
-
-    function Services(spotPrice, netWeight, attachments, hallmark, markup) {
-        const payment_weight = Math.ceil(spotPrice * netWeight);
-        const payment_hallmark = Math.ceil((hallmark / 100) * payment_weight);
-        const payment_markup = Math.ceil((payment_weight + payment_hallmark) * (markup / 100));
-        const payment_final = payment_weight + payment_hallmark + payment_markup + Number(attachments);
-
-        setPaymentWeight(payment_weight);
-        setPaymentHallmark(payment_hallmark);
-        setPaymentMarkup(payment_markup);
-        setPaymentFinal(payment_final);
-    }
-
-    useEffect(() => {
-        Services(spotPrice, netWeight, attachments, hallmark, markup);
-    }, [spotPrice, netWeight, attachments, hallmark, markup]);
+    const {
+        paymentWeight,
+        paymentHallmark,
+        paymentMarkup,
+        paymentFinal
+    } = CalculatorService(spotPrice, netWeight, attachments, hallmark, markup);
 
 
     return (
