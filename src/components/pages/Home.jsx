@@ -177,6 +177,102 @@ function Home() {
                     </LoadingButton>
                 </div>
             </div>
+
+
+            {/*component Calculator*/}
+            <div
+                className="mt-10 bg-white border border-gray-300 max-w-2xl w-4/5 shadow shadow-gray-500 mx-auto mb-8 p-4">
+                <div className="flex flex-col gap-6">
+                    <div className="flex items-center justify-around">
+                        <h1>نرخ طلا :</h1>
+                        <FormControl className="w-1/2 ml-0 pl-8" sx={{m: 1}} size="small" variant="filled">
+                            <InputLabel htmlFor="filled-adornment-amount"></InputLabel>
+                            <FilledInput
+                                id="filled-adornment-amount"
+                                startAdornment={<InputAdornment position="start">تومان</InputAdornment>}
+                                defaultValue={spotPrice}
+                                value={spotPrice}
+                                onChange={(e) => setSpotPrice(e.target.value)}
+                                sx={{height: "2rem"}}
+                            />
+                        </FormControl>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <p className="text-[#18181b] text-xs">وزن خالص طلا:</p>
+                            <FormControl className="w-1/2 ml-0 pl-8" sx={{m: 1}} size="small" variant="filled">
+                                <InputLabel htmlFor="filled-adornment-amount"></InputLabel>
+                                <FilledInput
+                                    id="filled-adornment-amount"
+                                    startAdornment={<InputAdornment position="start">گرم</InputAdornment>}
+                                    defaultValue={netWeight}
+                                    value={netWeight}
+                                    onChange={(e) => setNetWeight(e.target.value)}
+                                    sx={{height: "2rem"}}
+                                />
+                            </FormControl>
+                        </div>
+                        <div>
+                            <p className="text-[#18181b] text-xs">اجرت ساخت:</p>
+                            <FormControl className="w-1/2 ml-0 pl-8" sx={{m: 1}} size="small" variant="filled">
+                                <InputLabel htmlFor="filled-adornment-amount"></InputLabel>
+                                <FilledInput
+                                    id="filled-adornment-amount"
+                                    startAdornment={<InputAdornment position="start">%</InputAdornment>}
+                                    defaultValue={hallmark}
+                                    value={hallmark}
+                                    onChange={(e) => setHallmark(e.target.value)}
+                                    sx={{height: "2rem"}}
+                                />
+                            </FormControl>
+                        </div>
+                        <div>
+                            <p className="text-[#18181b] text-xs">سود فروش:</p>
+                            <FormControl className="w-1/2 ml-0 pl-8" sx={{m: 1}} size="small" variant="filled">
+                                <InputLabel htmlFor="filled-adornment-amount"></InputLabel>
+                                <FilledInput
+                                    id="filled-adornment-amount"
+                                    startAdornment={<InputAdornment position="start">%</InputAdornment>}
+                                    defaultValue={markup}
+                                    value={markup}
+                                    onChange={(e) => setMarkup(e.target.value)}
+                                    sx={{height: "2rem"}}
+                                />
+                            </FormControl>
+                        </div>
+                        <div>
+                            <p className="text-[#18181b] text-xs">ملحقات:</p>
+                            <FormControl className="w-4/5 ml-0 pl-8" sx={{m: 1}} size="small" variant="filled">
+                                <InputLabel htmlFor="filled-adornment-amount"></InputLabel>
+                                <FilledInput
+                                    id="filled-adornment-amount"
+                                    startAdornment={<InputAdornment position="start">تومان</InputAdornment>}
+                                    defaultValue={attachments}
+                                    value={attachments}
+                                    onChange={(e) => setAttachments(e.target.value)}
+                                    sx={{height: "2rem"}}
+                                />
+                            </FormControl>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    className={"mt-6 p-3 bg-[#52525b] rounded-xl w-full h-full text-sky-50"}>
+
+                    <div className="flex flex-col">
+                        <div className="flex justify-between text-[15px]">
+                            <p>قیمت نهایی محصول:</p>
+                            <p>{paymentFinal}<span className="mr-1 text-[#c7c7c7] text-[12px] font-semibold">تومان</span>
+                            </p>
+                        </div>
+                        <div>
+                            <p className="text-[#c7c7c7] text-[9px]">قیمت طلا + اجرت ساخت + سود + ملحقات</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
