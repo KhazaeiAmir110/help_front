@@ -15,6 +15,7 @@
     "@mui/icons-material": "^6.1.9",
     "@mui/lab": "^6.0.0-beta.17",
     "@mui/material": "^6.1.9",
+    "@mui/x-charts": "^7.23.0",
     "axios": "^1.7.7",
     "bootstrap-icons": "^1.11.3",
     "js-cookie": "^3.0.5",
