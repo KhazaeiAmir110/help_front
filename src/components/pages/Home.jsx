@@ -1,7 +1,8 @@
 import {useState} from "react";
 
-import LoadingButton from '@mui/lab/LoadingButton';
 import SaveIcon from '@mui/icons-material/Save';
+import LoadingButton from '@mui/lab/LoadingButton';
+import {LineChart} from '@mui/x-charts/LineChart';
 import {FilledInput, FormControl, InputAdornment, InputLabel} from "@mui/material";
 
 import CalculatorService from "../../services/CalculatorService.js";
@@ -279,6 +280,35 @@ function Home() {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            {/*component Chart*/}
+            <div
+                className="mt-10 bg-white border border-gray-300 max-w-2xl w-4/5 shadow shadow-gray-500 mx-auto mb-8 p-4">
+                <LineChart
+                    xAxis={[{data: [1, 2, 3, 3.5, 4, 4.1, 4.2, 4.3, 9, 10]}]}
+                    series={[
+                        {
+                            data: [2, 5.5, 2, 8.5, 1.5, 0, 2, 3, 22, 8.5],
+                            area: {
+                                gradient: true,
+                                colors: ['#FF6384', '#FF9F40'], // رنگ‌های گرادیانت
+                                areaColor: 'rgba(255, 99, 132, 0.2)', // رنگ ناحیه
+                            },
+                            color: '#FF6384', // رنگ خط
+                            point: {
+                                size: 50,
+                                color: '#FF6384', // اندازه و رنگ نقاط
+                            },
+                        },
+                    ]}
+                    width={600}
+                    height={400}
+                    margin={'100'}
+                    title="My Beautiful Line Chart" // عنوان چارت
+                    xLabel="X-axis Label" // برچسب محور X
+                    yLabel="Y-axis Label" // برچسب محور Y
+                />
             </div>
         </div>
     );
