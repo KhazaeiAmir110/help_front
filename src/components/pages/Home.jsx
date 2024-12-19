@@ -6,6 +6,7 @@ import {LineChart} from '@mui/x-charts/LineChart';
 import {FilledInput, FormControl, InputAdornment, InputLabel} from "@mui/material";
 
 import CalculatorService from "../../services/CalculatorService.js";
+import axios from "axios";
 
 /**
  * A component that manages the state and calculations for a gold pricing calculator.
@@ -44,15 +45,17 @@ function Home() {
                 <div className="flex flex-col gap-8">
                     <div className="flex items-center justify-between">
                         <h1>نرخ طلا :</h1>
-                        <FormControl className="w-4/5 ml-0 pl-8" sx={{m: 1}} size="small" variant="filled">
+                        <FormControl className="w-4/5 ml-0 pl-8 text-sky-50" sx={{m: 1}} size="small" variant="filled">
                             <InputLabel htmlFor="filled-adornment-amount"></InputLabel>
                             <FilledInput
                                 id="filled-adornment-amount"
-                                startAdornment={<InputAdornment position="start">تومان</InputAdornment>}
+                                startAdornment={<InputAdornment className="text-sky-50"
+                                                                position="start">تومان</InputAdornment>}
                                 defaultValue={spotPrice}
                                 value={spotPrice}
                                 onChange={(e) => setSpotPrice(e.target.value)}
                                 sx={{height: "2.5rem"}}
+                                className={"text-sky-50"}
                             />
                         </FormControl>
                     </div>
